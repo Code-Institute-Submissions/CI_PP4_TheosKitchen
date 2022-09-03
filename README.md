@@ -60,3 +60,19 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 - As the website owner, I want to a user friendly and easily navigable user interface.
 
 [Back to Table Of Content](#table-of-content)
+
+## User Experience
+### Target Audience
+- This website is targets people who want to learn more about how to cook healthy meals.
+- This website targets people looking to loose weight by eating a healthy diet.
+- This website targets people who want to learn how to cook simple but tasty meals.
+
+### User Requirements and Expectations
+- The user can expect an intuitive and accessible navigation system.
+- The user can expect to easily find healthy and easy to cook recipes.
+- The user can expect all links work as expected and functions perform their tasks correctly.
+- The user can expect presentation is in line with the website guidelines and the website is visually appealing on all screen sizes.
+- The user can expect easy to read headings to tell the users at a glance what they are looking at.
+- The user can expect accessibility features to be clearly defined.
+
+[Back to Table Of Content](#table-of-content)
