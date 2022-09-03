@@ -45,3 +45,18 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
+
+## Project Goals
+### Website User Goals
+- As a website user, I want to be able to register for an account and log in and out when I wish.
+- As a website user, I want to be able to view the recipe's stored on the website.
+- As a website user, I want to be able to submit my own recipes to share with others.
+- As a website user, I want to have easy options to navigate around the website.
+
+### Website Owner Goals
+- As the website owner, I want to promote the website to new and existing users.
+- As the website owner, I want the users to be able to create an account and add their own recipes.
+- As the website owner, I want users to be able to search for recipes and favorite the ones that they like.
+- As the website owner, I want to a user friendly and easily navigable user interface.
+
+[Back to Table Of Content](#table-of-content)
