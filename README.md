@@ -122,7 +122,7 @@ The website has been built using a template engine so that all pages follow the 
 
 The Pages are structured in a Regularly used, user friendly and well-known format. This makes each page easy to navigate, coupled with a responsive navbar and footer this gives the user many options for navigating around the website.
 
-The website consists of 6 pages and an Error Page.
+The website consists of 8 main pages, some views spread from these pages and an Error Page.
 - Home page
 - Login page
 - Signup page
@@ -142,5 +142,46 @@ The website consists of 6 pages and an Error Page.
 <img src="documentation/wireframes/desktop.jpg">
 </details>
 <br>
+
+[Back to Table Of Content](#table-of-content)
+
+## Technologies Used
+### Languages
+- [HTML](https://www.w3schools.com/html/default.asp)
+- [CSS](https://www.w3schools.com/css/default.asp)
+- [JavaScript](https://www.w3schools.com/js/default.asp)
+- [Python](https://www.w3schools.com/python/default.asp)
+
+### Frameworks and Tools
+- [GitHub](https://github.com/) was used to maintain the version control and store the project remotely
+- [Gitpod](https://gitpod.io/) was used to write all the code and to link up with Github to maintain the version control.
+- [Balsamiq](https://balsamiq.com/) was use to create the wireframes for the website.
+- [Google Fonts](https://fonts.google.com/) was used to pick out the fonts in use across the website.
+- [Favicon](https://favicon.io/) was used to create the favicon.
+- [coolors](https://coolors.co/) was used to generate a colour pallette.
+- [Am I Responsive?](https://ui.dev/amiresponsive) was used to test the responsive nature of the website design.
+- [Bootstrap](https://getbootstrap.com/) was used for the pre-defined components and responsive nature of the layout.
+- [Heroku](https://dashboard.heroku.com/) was used to host the website for the additional back-end functionality.
+- [Cloudinary](https://cloudinary.com/) was used for its free persistent file storage capability over heroku.
+- [W3C HTML Validator](https://validator.w3.org/) was used to validate the HTML
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS.
+- [WAVE](https://wave.webaim.org/) was used to validate the accessibility of the website.
+- [JShint](https://jshint.com/) was used to validate the Javascript.
+- [PEP8 Online](http://pep8online.com/) was used to validate the Python.
+- [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to validate the website performance, best practice and SEO.
+
+### Libraries
+#### Python Libraries
+
+
+#### Third Party Libraries
+- [Django](https://www.djangoproject.com/) – JUSTIFICATION: Django is used as both a framework and templating engine to speed up the development of the project.
+- [Gunicorn](https://gunicorn.org/) – JUSTIFICATION: Gunicorn is used as the WSGI HTTP Server.
+- [PostgreSQL](https://www.postgresql.org/) – JUSTIFICATION: PostgresSQL is used as the database to make sure we have persistent storage for the recipes.
+- [Psycopg2](https://pypi.org/project/psycopg2/) – JUSTIFICATION: Psycopg2 is a database adapter helping me to access the data and is required for Postgres.
+- [Dj-database-url](https://pypi.org/project/dj-database-url/) – JUSTIFICATION: is used to link the database to our deployed version using a URL environment variable.
+- [Dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) – JUSTIFICATION: is used to link cloudinary to our deployed version using a URL environment variable for persistent image storage.
+- [Summernote](https://summernote.org/) – JUSTIFICATION: Summernote is used to allow users to type their own recipes into the website using a simple text editor.
+- [Django-Allauth](https://pypi.org/project/django-allauth/0.13.0/) – JUSTIFICATION: Django-Allauth is being used to provide email authentication and password management.
 
 [Back to Table Of Content](#table-of-content)

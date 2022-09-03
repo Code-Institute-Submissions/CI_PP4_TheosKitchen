@@ -25,12 +25,20 @@
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify",
    "cSpell.words": [
+      "Allauth",
+      "Balsamiq",
+      "cloudinary",
       "colour",
       "colours",
       "coolors",
       "favourite",
+      "Gunicorn",
+      "Psycopg",
       "Signup",
+      "Summernote",
+      "templating",
       "Theo's",
-      "wireframes"
+      "wireframes",
+      "WSGI"
    ]
 }
