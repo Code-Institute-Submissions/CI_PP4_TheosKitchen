@@ -7,6 +7,16 @@ def categories(request):
     return render(request, 'categories.html')
 
 
+def categories_view(request, cats):
+    """
+    Renders the recipes filtered by categories
+    """
+    categories_list = Recipe.objects.filter(
+        categories__title__contains=cats, status=1)
+    return render(request, 'category.html', {
+        'cats': cats.title(), 'categories_list': categories_list})
+
+
 class Featured(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(featured=True).order_by('-rating')

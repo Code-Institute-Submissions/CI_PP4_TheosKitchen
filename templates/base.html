@@ -28,7 +28,7 @@
               </li>
               {% if user.is_authenticated %}
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Account</a>
@@ -38,7 +38,10 @@
                 </li>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="#">Login/Register</a>
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
               </li>
               {% endif %}
               <li class="nav-item dropdown">
@@ -70,7 +73,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-3 py-3 navbar-fixed-bottom bg-dark">
+    <footer class="footer mt-3 py-3 fixed-bottom bg-dark">
         <p class="m-0 text-center text-white">Thank you for visiting!</p>
         <p class="m-0 text-center text-white">Find out more at the following links: 
             <i class="fab fa-facebook-square ms-3"></i>

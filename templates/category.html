@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section>
+<h2 class="title text-center">Category: <span class="color-light">{{ cats }}</span></h2>
+{% if categories_list %}
+<div class="container">
+    <!-- Recipe List -->
+    <div class="col-12 mt-3">
+        <div class="row justify-content-md-center mt-5">
+            {% for recipe in recipe_list %}
+            <div class="col-md-2">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Time Taken: {{ recipe.time_taken }} minutes</li>
+                        <li class="list-group-item">{{ recipe.description |safe }}</li>
+                        <li class="list-group-item">Recipe owner: {{ recipe.author }}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                        <hr />
+                        <p class="card-text text-muted h6"><i class="far fa-heart"></i>
+                            {{ recipe.number_of_likes }}</p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row justify-content-md-center mt-5">
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{% else %}
+<div class="container p-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <h2 class="text-center">Sorry, there is no recipes for {{ cats }} category yet!</h2>
+        </div>
+    </div>
+</div>
+{% endif %}
+</section>
+
+{% endblock content %}

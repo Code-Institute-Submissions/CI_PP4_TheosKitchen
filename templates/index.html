@@ -19,12 +19,11 @@
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">{{ recipe.recipe_name }}</h5>
-                          <p class="card-text">{{ recipe.recipe_name }}</p>
                         </div>
                         <ul class="list-group list-group-flush">
                           <li class="list-group-item">Time Taken: {{ recipe.time_taken }} minutes</li>
                           <li class="list-group-item">{{ recipe.description |safe }}</li>
-                          <li class="list-group-item">Recipe owner: {{ recipe.recipe_owner }}</li>
+                          <li class="list-group-item">Recipe owner: {{ recipe.author }}</li>
                         </ul>
                         <div class="card-body">
                           <a href="#" class="card-link">Card link</a>
