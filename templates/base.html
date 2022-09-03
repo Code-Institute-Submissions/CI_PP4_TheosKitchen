@@ -15,69 +15,75 @@
 </head>
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'Home' %}">
-          <img src="{% static 'images/favicon.ico' %}" alt="" width="30" height="24">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'Home' %}">
+        <img src="{% static 'images/favicon.ico' %}" alt="" width="30" height="24">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'Home' %}">Home</a>
+          </li>
+            {% if user.is_authenticated %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'Home' %}">Home</a>
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>
-              {% if user.is_authenticated %}
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Add/ Edit Recipes</a>
+              </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
+            </li>
+            {% endif %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="/categories" aria-label="Go to the categories page">Categories</a></li>
+                <li>
+                  <hr class="dropdown-divider">
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Account</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Add/ Edit Recipes</a>
-                </li>
-              {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
-              </li>
-              {% endif %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Categories
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/categories" aria-label="Go to the categories page">Categories</a></li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    {% for category in categories_list %}
-                      <li><a class="dropdown-item" href="{% url 'categories_list' category.title %}" aria-label="Go to the this category.">{{ category.title }}</a></li>
-                    {% endfor%}
-                </ul>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'recipes' %}">Recipe's</a>
-              </li>
+              {% for category in categories_list %}
+                <li><a class="dropdown-item" href="{% url 'categories_list' category.title %}" aria-label="Go to the this category.">{{ category.title }}</a></li>
+              {% endfor%}
             </ul>
-        </div>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'recipes' %}">Recipe's</a>
+          </li>
+        </ul>
+        <label for="theme" class="switch">Theme Switch
+          <span>
+            <input id="theme" type="checkbox" name="theme">
+            <span class="slider"></span>
+          </span>
+        </label>
       </div>
-    </nav>
+    </div>
+  </nav>
     <!-- End of NavBar -->
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0 main-bg mt-5">
         {% block content %}
         <!-- Extended content goes here. -->
         {% endblock content %}
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-3 py-3 fixed-bottom bg-dark">
-        <p class="m-0 text-center text-white">Thank you for visiting!</p>
-        <p class="m-0 text-center text-white">Find out more at the following links: 
+    <footer class="footer mt-3 py-3 fixed-bottom">
+        <p class="m-0 text-center">Thank you for visiting!</p>
+        <p class="m-0 text-center">Find out more at the following links: 
             <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
@@ -86,5 +92,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+<!-- Theme switch script -->
+<script src="{% static 'js/theme.js' %}"></script
 </body>
 </html>
