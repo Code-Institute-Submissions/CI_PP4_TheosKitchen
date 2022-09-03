@@ -17,9 +17,6 @@ Theo's kitchen is a website that inspire's people to create and share their reci
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
 3. [User Stories](#user-stories)
-    1. [First-time User](#first-time-user)
-    2. [Returning User](#returning-user)
-    3. [Website Owner](#website-owner)
 4. [Design](#design)
     1. [Design Choices](#design-choices)
     2. [Colour](#colour)
@@ -45,7 +42,7 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 10. [Deployment](#deployment)
 11. [Credits](#credits)
 12. [Acknowledgements](#acknowledgements)
-
+ 
 ## Project Goals
 ### Website User Goals
 - As a website user, I want to be able to register for an account and log in and out when I wish.
@@ -97,3 +94,53 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 
 All functionality and development of this project were managed using GitHub which Projects can be found
 [here](https://github.com/users/benjamindraper1996/projects/4)
+
+[Back to Table Of Content](#table-of-content)
+
+## Design
+### Design Choices
+The website was designed to be responsive and and easy to navigate with a attractive colour pallette that compliments the goals of the website.
+
+### Colour
+For the colour scheme I have opted to implement a dark and light theme while using colours that compliment the goals and ambitions of the website. To narrow down the choice of colours I used [coolors](https://coolors.co/) an example of both the dark and light theme are shown below.
+<br>
+
+#### Dark Mode
+![Dark Mode Theme](documentation/features/colour-palette-dark.png)
+<br>
+
+#### Light Mode
+![Light Mode Theme](documentation/features/colour-palette-light.png)
+
+### Fonts
+ I am using Inter font with a backup of sans-serif across the website for the title and headers. This is used to maintain a Consistent and professional look with an easily readable format. 
+<br>
+For the Secondary font for the body text the owners decided to use Quicksand with a backup of sans-serif, this will help to maintain the consistent theme across the website.
+
+### Structure
+The website has been built using a template engine so that all pages follow the same design to maintain the feel across the website.
+
+The Pages are structured in a Regularly used, user friendly and well-known format. This makes each page easy to navigate, coupled with a responsive navbar and footer this gives the user many options for navigating around the website.
+
+The website consists of 6 pages and an Error Page.
+- Home page
+- Login page
+- Signup page
+- Logout page
+- Account page
+- Recipes page (with a detailed view for each recipe)
+- Catagories page (with a separate list for each category)
+- Add/ Edit Recipes page
+- Error pages (to guide the user back to the main website)
+
+### Wireframes
+
+<details><summary>Mobile Design</summary>
+<img src="documentation/wireframes/mobile.jpg">
+</details>
+<details><summary>Desktop Design</summary>
+<img src="documentation/wireframes/desktop.jpg">
+</details>
+<br>
+
+[Back to Table Of Content](#table-of-content)
