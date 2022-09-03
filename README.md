@@ -76,3 +76,24 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 - The user can expect accessibility features to be clearly defined.
 
 [Back to Table Of Content](#table-of-content)
+
+## User Stories
+1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
+2. As a first time user would like to be able to sign up for an account so that I can interact with the community.
+3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
+4. As a first time user I want to know about the website and its ethos so that I know I am getting a good service and a well unbiased.
+5. As a first time user I want to know how to find social media links so that I can have in depth conversation with my peers. 
+6. As a returning user I would like to be able to favourite the recipes I like the most so that I can easily find them again later.
+7. As a returning user I would like to be able to upload my own recipes to share with the community so that I can get their thoughts and feedback on my recipes.
+8. As the website owner I there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
+9. As the website owner I want the recipes divided into categories so that users looking for something specific can navigate easier.
+10. As the website owner I want the website to act responsively to all device sizes so that the website can be viewed across all devices.
+11. As the website owner I want users to get redirected to custom error pages so that they understand when when something has gone wrong and can be redirected back to the main website.
+12. As the website owner I want users to create and manage their own accounts so that they can engage in conversation, favourite recipes and add their own.
+13. As the website owner I want users to be able to comment on the recipe's on the website and share their opinions so that they can engage with the community more. 
+14. As the website owner I want to be able to manually approve comments so that all comments meet the website's ethos.
+
+### Agile Methodology
+
+All functionality and development of this project were managed using GitHub which Projects can be found
+[here](https://github.com/users/benjamindraper1996/projects/4)
