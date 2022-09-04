@@ -7,6 +7,11 @@ def categories(request):
     return render(request, 'categories.html')
 
 
+def error_500(request):
+    data = {}
+    return render(request, '500.html', data)
+
+
 def categories_view(request, cats):
     """
     Renders the recipes filtered by categories

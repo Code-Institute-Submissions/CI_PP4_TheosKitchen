@@ -78,7 +78,7 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
 2. As a first time user would like to be able to sign up for an account so that I can interact with the community.
 3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
-4. As a first time user I want to know about the website and its ethos so that I know I am getting a good service and a well unbiased.
+4. As a first time user I want to know about the website and its ethos so that I know I am getting a good service and unbiased opinion.
 5. As a first time user I want to know how to find social media links so that I can have in depth conversation with my peers. 
 6. As a returning user I would like to be able to favourite the recipes I like the most so that I can easily find them again later.
 7. As a returning user I would like to be able to upload my own recipes to share with the community so that I can get their thoughts and feedback on my recipes.

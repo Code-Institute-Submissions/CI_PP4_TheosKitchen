@@ -44,32 +44,26 @@ main {
     padding-bottom: 100px;
 }
 
+main p, main h1, .footer p, .nav-link {
+    color: var(--font-color);
+}
+
 .title {
     font-family: var(--headertext);
 }
 
-.navbar, .footer {
+.navbar, .footer, .btn {
     background-color: var(--menu-color);
     color: var(--font-color);
 }
 
 /* navbar styles */
-.navbar {
-
-}
-
-.nav-link {
-    color: var(--font-color);
-}
-
 .navbar-toggler-icon {
     background-image: var(--toggler)
 }
 
 /* Footer Styles */
-.footer p {
-    color: var(--font-color);
-}
+
 
 /* Theme Switch Styles */
 .switch {
