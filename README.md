@@ -361,3 +361,12 @@ All pages passed with no errors and the contact form caused a warning that says 
 <img src="documentation/validation/validation-html-error.jpg">
 </details>
 <br>
+
+### CSS Validation
+I used the W3C Jigsaw CSS Validation Service to validate the CSS of the website.
+My CSS passed with no errors and warnings to show.
+<details><summary>CSS Validation</summary>
+<img src="documentation/validation/validation-css-whole-page.jpg">
+</details>
+<br>
+
