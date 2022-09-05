@@ -322,3 +322,42 @@ The website consists of 8 main pages, some views spread from these pages and an 
 
 
 [Back to Table Of Content](#table-of-content)
+
+## Validation
+### HTML Validation
+I used the W3C Validation Service to validate the HTML of the website.
+All pages passed with no errors and the contact form caused a warning that says there is an unnecessary script on page load, but this is required for the EmailJS form API to work, this was tested without the code and it will not function without it.
+<details><summary>Base HTML</summary>
+<img src="documentation/validation/validation-html-base.jpg">
+</details>
+<details><summary>Home Page</summary>
+<img src="documentation/validation/validation-html-index.jpg">
+</details>
+<details><summary>Login Page</summary>
+<img src="documentation/validation/validation-html-login.jpg">
+</details>
+<details><summary>Logout Page</summary>
+<img src="documentation/validation/validation-html-logout.jpg">
+</details>
+<details><summary>Signup Page</summary>
+<img src="documentation/validation/validation-html-signup.jpg">
+</details>
+<details><summary>Categories Page</summary>
+<img src="documentation/validation/validation-html-categories.jpg">
+</details>
+<details><summary>Category Page</summary>
+<img src="documentation/validation/validation-html-category.jpg">
+</details>
+<details><summary>Recipes Page </summary>
+<img src="documentation/validation/validation-html-recipes.jpg">
+</details>
+<details><summary>Add / Edit Recipes Page </summary>
+<img src="documentation/validation/validation-html-add-edit-recipes.jpg">
+</details>
+<details><summary>Account Page </summary>
+<img src="documentation/validation/validation-html-Account.jpg">
+</details>
+<details><summary>Error Page </summary>
+<img src="documentation/validation/validation-html-error.jpg">
+</details>
+<br>
