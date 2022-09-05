@@ -215,3 +215,14 @@ The website consists of 8 main pages, some views spread from these pages and an 
 <img src="documentation/features/footer.jpg">
 </details>
 <br>
+
+### User Sign Up
+- The User sign up form allows users to create an account to interact with the community.
+- When a user signs up for an account they are able to favorite and share their own recipes with the community.
+- The User sign up form is fully responsive down to mobile size devices.
+- User stories covered: 2,6,7,10,12,13
+<details><summary>User Sign Up</summary>
+<img src="documentation/features/user-sign-up.jpg">
+</details>
+<br>
+
