@@ -433,3 +433,37 @@ I used WAVE WebAIM web accessibility evaluation tool to ensure the website met h
 </details>
 <br>
 
+### Performance
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website. 
+<details><summary>Home Page</summary>
+<img src="documentation/validation/lighthouse-index.jpg">
+</details>
+<details><summary>Login Page</summary>
+<img src="documentation/validation/lighthouse-login.jpg">
+</details>
+<details><summary>Logout Page</summary>
+<img src="documentation/validation/lighthouse-logout.jpg">
+</details>
+<details><summary>Signup Page</summary>
+<img src="documentation/validation/lighthouse-signup.jpg">
+</details>
+<details><summary>Categories Page</summary>
+<img src="documentation/validation/lighthouse-categories.jpg">
+</details>
+<details><summary>Category Page</summary>
+<img src="documentation/validation/lighthouse-category.jpg">
+</details>
+<details><summary>Recipes Page </summary>
+<img src="documentation/validation/lighthouse-recipes.jpg">
+</details>
+<details><summary>Add / Edit Recipes Page </summary>
+<img src="documentation/validation/lighthouse-add-edit-recipes.jpg">
+</details>
+<details><summary>Account Page </summary>
+<img src="documentation/validation/lighthouse-account.jpg">
+</details>
+<details><summary>Error Page </summary>
+<img src="documentation/validation/lighthouse-error.jpg">
+</details>
+<br>
+
