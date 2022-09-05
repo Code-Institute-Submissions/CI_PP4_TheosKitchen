@@ -236,3 +236,13 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Favorites
+- The favorites are a feature of the user model, it acts as a list of ID's for the recipes the users likes the most and would like to come back to.
+- The favorites feature also allows users make a list of items that they can find through their account page.
+- The favorites feature also shows you the number of likes a recipe has received.
+- User stories covered: 6,12
+<details><summary>Favorites</summary>
+<img src="documentation/features/favorites.jpg">
+</details>
+<br>
+
