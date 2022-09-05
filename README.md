@@ -296,3 +296,29 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Recipe Comments
+-
+- User stories covered: 
+<details><summary>Recipe Comments</summary>
+<img src="documentation/features/recipe-comments.jpg">
+</details>
+<br>
+
+### Error Pages
+-
+- User stories covered: 
+<details><summary>Error Pages</summary>
+<img src="documentation/features/error-pages.jpg">
+</details>
+<br>
+
+### Social Media Links
+-
+- User stories covered: 
+<details><summary>Social Media Links</summary>
+<img src="documentation/features/social-media-links.jpg">
+</details>
+<br>
+
+
+[Back to Table Of Content](#table-of-content)
