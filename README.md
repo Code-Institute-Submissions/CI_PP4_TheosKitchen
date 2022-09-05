@@ -266,3 +266,12 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Welcome Message/ Ethos
+- The welcome message/ ethos is located on the home page and easily found as soon as you navigate to the site.
+- The welcome message/ ethos lets users know they are getting a good service and unbiased opinion.
+- User stories covered: 4
+<details><summary>Welcome Message/ Ethos</summary>
+<img src="documentation/features/welcome-message.jpg">
+</details>
+<br>
+
