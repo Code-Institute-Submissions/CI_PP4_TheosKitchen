@@ -370,3 +370,34 @@ My CSS passed with no errors and warnings to show.
 </details>
 <br>
 
+### JavaScript Validation
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files.
+All Files passed with no errors and minimal warnings to show.
+<details><summary>Theme Switch</summary>
+<img src="documentation/validation/validation-js-theme.jpg">
+</details>
+<br>
+
+### Python Validation
+I used the PEP8 Validation Service to validate the python code for the website.
+My code passed with no errors and warnings to show.
+
+<details><summary>Recipe App</summary>
+
+<details><summary>Python File</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
+
+</details>
+
+<details><summary>Comments App</summary>
+
+<details><summary>Python File</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
+
+</details>
+<br>
+
+
+
