@@ -285,3 +285,14 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Featured Recipes
+- The featured recipes are shown on the home page.
+- The featured recipes are a list of recipes selected by the admin to be the best recipes.
+- Only the featured recipes will show in this list, ordered by rating.
+- The featured recipes list is fully responsive down to mobile size devices.
+- User stories covered: 1,3,8,10
+<details><summary>Featured Recipes</summary>
+<img src="documentation/features/featured-recipes.jpg">
+</details>
+<br>
+
