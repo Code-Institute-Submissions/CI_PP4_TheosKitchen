@@ -185,3 +185,22 @@ The website consists of 8 main pages, some views spread from these pages and an 
 - [Django-Allauth](https://pypi.org/project/django-allauth/0.13.0/) – JUSTIFICATION: Django-Allauth is being used to provide email authentication and password management.
 
 [Back to Table Of Content](#table-of-content)
+
+## Features
+### Navbar / Dropdown Menu
+- Featured on all pages across the website.
+- The Navbar / Dropdown menu is fully responsive and changes to a hamburger style button for smaller screen sizes.
+- The Navbar / Dropdown menu has a link to login or sign up for an account.
+- The Navbar / Dropdown menu includes links to allow users to navigate around the website easily.
+- The Navbar / Dropdown menu includes the dark theme switch toggler option for users that prefer to use a lighter of darker theme.
+- user stories covered: 1,2,10,12,13
+<details><summary>Navbar / Dropdown Menu</summary>
+<img src="documentation/features/hamburger.jpg">
+</details>
+<details><summary>Navbar / Dropdown Menu Light</summary>
+<img src="documentation/features/menu-light.jpg">
+</details>
+<details><summary>Navbar / Dropdown Menu Dark</summary>
+<img src="documentation/features/menu-dark.jpg">
+</details>
+<br>

@@ -67,4 +67,4 @@ class Comment(models.Model):
 
     def set_slug(self):
         """Sets the slug"""
-        return reverse('comment', args=[self.comment_post.slug])
+        return reverse('comment', args=[self.post.slug])
