@@ -467,3 +467,17 @@ Google Lighthouse in Google Chrome Developer Tools was used to test the performa
 </details>
 <br>
 
+### Device Testing
+The website was tested on the following devices:
+- Huawei Matebook D15
+- MacBook Pro 13” 2019
+- Samsung Galaxy S21 FE 5G
+- Samsung Galaxy S20 FE 5G
+In addition, the website was tested using Google Chrome Developer Tools Device Toggling option for all available device options.
+
+### Browser Compatibility
+The website was tested on the following browsers in both regular and incognito modes:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Edge
+
