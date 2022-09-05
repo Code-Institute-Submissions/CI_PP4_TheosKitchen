@@ -275,3 +275,13 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Categories
+- The categories page allows users to filter the recipes by what type of meal they are looking for.
+- The categories page displays a list of only the current categories, if any are added or removed the list will update.
+- The categories page is fully responsive down to mobile size devices.
+- User stories covered: 1,3,9,10
+<details><summary>Categories</summary>
+<img src="documentation/features/categories.jpg">
+</details>
+<br>
+
