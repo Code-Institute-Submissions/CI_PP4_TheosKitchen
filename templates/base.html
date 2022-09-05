@@ -57,7 +57,7 @@
                   <hr class="dropdown-divider">
                 </li>
               {% for category in categories_list %}
-                <li><a class="dropdown-item" href="{% url 'categories_list' category.title %}" aria-label="Go to the this category.">{{ category.title }}</a></li>
+                <li><a class="dropdown-item" href="{% url 'categories_list' category %}" aria-label="Go to the this category.">{{ category.title }}</a></li>
               {% endfor%}
             </ul>
           <li class="nav-item">

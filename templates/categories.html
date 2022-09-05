@@ -10,7 +10,7 @@
                 {{ categories }}
                 {% for category in categories_list %}
                 <div class="col-md-4">
-                    <a href="{% url 'categories_list' category.title %}" aria-label="Go to a list of all categories.">
+                    <a href="{% url 'categories_list' category %}" aria-label="Go to a list of all categories.">
                         <div class="content-img">
                             <div class="overlay"></div>
                             <img src="{{ category.category_image.url}}"

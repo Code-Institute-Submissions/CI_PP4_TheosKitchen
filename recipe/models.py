@@ -13,11 +13,15 @@ class Category(models.Model):
     """
     class Meta:
         verbose_name_plural = 'Categories'
-    title = models.CharField(max_length=20, unique=True)
+    title = models.CharField(max_length=20)
     category_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
         return self.title
+
+    def set_slug(self):
+        """Sets the slug"""
+        return reverse('category', args=[self.title.slug])
 
 
 class Recipe(models.Model):
