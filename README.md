@@ -399,5 +399,37 @@ My code passed with no errors and warnings to show.
 </details>
 <br>
 
-
+### Accessibility
+I used WAVE WebAIM web accessibility evaluation tool to ensure the website met high accessibility standards. All pages passed with no errors.
+<details><summary>Home Page</summary>
+<img src="documentation/validation/accessibility-index.jpg">
+</details>
+<details><summary>Login Page</summary>
+<img src="documentation/validation/accessibility-login.jpg">
+</details>
+<details><summary>Logout Page</summary>
+<img src="documentation/validation/accessibility-logout.jpg">
+</details>
+<details><summary>Signup Page</summary>
+<img src="documentation/validation/accessibility-signup.jpg">
+</details>
+<details><summary>Categories Page</summary>
+<img src="documentation/validation/accessibility-categories.jpg">
+</details>
+<details><summary>Category Page</summary>
+<img src="documentation/validation/accessibility-category.jpg">
+</details>
+<details><summary>Recipes Page </summary>
+<img src="documentation/validation/accessibility-recipes.jpg">
+</details>
+<details><summary>Add / Edit Recipes Page </summary>
+<img src="documentation/validation/accessibility-add-edit-recipes.jpg">
+</details>
+<details><summary>Account Page </summary>
+<img src="documentation/validation/accessibility-Account.jpg">
+</details>
+<details><summary>Error Page </summary>
+<img src="documentation/validation/accessibility-error.jpg">
+</details>
+<br>
 
