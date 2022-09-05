@@ -204,3 +204,14 @@ The website consists of 8 main pages, some views spread from these pages and an 
 <img src="documentation/features/menu-dark.jpg">
 </details>
 <br>
+
+### Footer
+- Featured across the whole website.
+- The Footer contains links to the various social media handles.
+- The Footer contains Information on how to get in touch with support when needed.
+- The footer is fully responsive down to mobile size devices.
+- User stories covered: 1,5,10
+<details><summary>Footer</summary>
+<img src="documentation/features/footer.jpg">
+</details>
+<br>
