@@ -226,3 +226,13 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### User Login
+- The User login form allows users to login to an existing account to interact with the community.
+- When a user logs in to their account they are able to favorite and share their own recipes with the community.
+- The User login form is fully responsive down to mobile size devices.
+- User stories covered: 6,7,10,12,13
+<details><summary>User Login</summary>
+<img src="documentation/features/user-login.jpg">
+</details>
+<br>
+
