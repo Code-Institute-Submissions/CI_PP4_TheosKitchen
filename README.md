@@ -246,3 +246,13 @@ The website consists of 8 main pages, some views spread from these pages and an 
 </details>
 <br>
 
+### Add and Edit Recipes
+- The Add and Edit Recipe page allows the user to add their own recipe to the website.
+- The Add and Edit Recipe page allows a users to edit their own recipes but should not allow them to edit others.
+- The Add and Edit Recipe page is fully responsive down to mobile size devices.
+- User stories covered: 7,10,12
+<details><summary>Add and Edit Recipes</summary>
+<img src="documentation/features/add-edit-recipes.jpg">
+</details>
+<br>
+
