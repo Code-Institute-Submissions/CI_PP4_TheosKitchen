@@ -297,24 +297,29 @@ The website consists of 8 main pages, some views spread from these pages and an 
 <br>
 
 ### Recipe Comments
--
-- User stories covered: 
+- The Recipe  comments are shown on the Recipe details page.
+- The Recipe comments are unique per Recipe.
+- The Recipe comments are set to be manually approved by an admin for this project, in a real world deployment this can be changed to allow for different settings. 
+- User stories covered: 7,12,14
 <details><summary>Recipe Comments</summary>
 <img src="documentation/features/recipe-comments.jpg">
 </details>
 <br>
 
 ### Error Pages
--
-- User stories covered: 
+- The custom Error pages are used to replace the standard error pages from django.
+- The custom Error pages cover 400, 404, 403, 500 errors.
+- The featured recipes list is fully responsive down to mobile size devices.
+- User stories covered: 1,10,11
 <details><summary>Error Pages</summary>
 <img src="documentation/features/error-pages.jpg">
 </details>
 <br>
 
 ### Social Media Links
--
-- User stories covered: 
+- The social media links can be found in the footer.
+- The social media links link to various social media handles, opening in a new tab.
+- User stories covered: 5
 <details><summary>Social Media Links</summary>
 <img src="documentation/features/social-media-links.jpg">
 </details>
