@@ -44,7 +44,7 @@ main {
     padding-bottom: 100px;
 }
 
-main p, main h1, .footer p, .nav-link {
+main p, main h1, .footer p, .nav-link, .social-networks {
     color: var(--font-color);
 }
 
@@ -52,7 +52,7 @@ main p, main h1, .footer p, .nav-link {
     font-family: var(--headertext);
 }
 
-.navbar, .footer, .btn {
+.navbar, .footer, .btn, .page-link {
     background-color: var(--menu-color);
     color: var(--font-color);
 }
