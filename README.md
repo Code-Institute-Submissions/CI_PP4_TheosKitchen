@@ -260,7 +260,7 @@ The website consists of 8 main pages, some views spread from these pages and an 
 - The recipes list is shown on the recipes page and displays a list of all the recipes.
 - The recipes list is ordered by rating, this can be set by the admin.
 - The recipes list is also paginated so that the user can only see 6 recipes at a time with navigation underneath.
-- User stories covered: 1,3,4,5
+- User stories covered: 1,3,4
 <details><summary>Recipe List</summary>
 <img src="documentation/features/recipe-list.jpg">
 </details>
