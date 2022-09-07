@@ -25,6 +25,7 @@
                         <a class="nav-link" href="#">Add/ Edit Recipes</a>
                     </li>
                 {% else %}
+                <!-- User Signup / Login -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
@@ -32,6 +33,7 @@
                     <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
                 </li>
                 {% endif %}
+                <!-- Categories Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -51,6 +53,7 @@
                     <a class="nav-link" href="{% url 'recipes' %}">Recipe's</a>
                 </li>
             </ul>
+            <!-- Theme switch toggle -->
             <label for="theme" class="switch">Theme Switch
                 <span>
                     <input id="theme" type="checkbox" name="theme">
