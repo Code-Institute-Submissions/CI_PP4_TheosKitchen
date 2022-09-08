@@ -608,3 +608,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+11. As the website owner I want users to get redirected to custom error pages so that they understand when when something has gone wrong and can be redirected back to the main website.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Error Pages | From any page of the website, go to the url bar and add on to the end of the url with a random string of characters. | The user is redirected to a custom Error page to match the theme and design of the website. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
