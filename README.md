@@ -555,3 +555,15 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
+
+6. As a returning user I would like to be able to favorite the recipes I like the most so that I can easily find them again later.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Favorites | From any page of the website and once logged into an account, using the Navbar navigate to the Recipes page, find a recipe you like and locate teh heart icon at teh bottom of the card and click it mark it as a Favorite recipe, using the Navbar, navigate to the account page and view the users favorite recipes. | The user can see their favorite recipes. | Works as expected |
+
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
