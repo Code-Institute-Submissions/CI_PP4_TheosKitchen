@@ -544,3 +544,14 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
+
+5. As a first time user I want to know how to find social media links so that I can have in depth conversation with my peers.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Footer | On any page of the website scroll all the way down to the bottom of the page and locate the Footer with social media links. |  | Works as expected |
+| Social Media Links |  |  | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
