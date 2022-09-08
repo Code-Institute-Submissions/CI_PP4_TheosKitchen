@@ -500,3 +500,13 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
+
+2. As a first time user I would like to be able to sign up for an account so that I can interact with the community.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| User Sign Up | From any page on the website, when not logged in, locate the Sign Up button on the Navbar to take you to the Sign Up form. | Fill out and submit the form to be signed into your account. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
