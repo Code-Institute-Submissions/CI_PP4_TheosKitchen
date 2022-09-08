@@ -628,3 +628,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+13. As the website owner I want users to be able to comment on the recipe's on the website and share their opinions so that they can engage with the community more.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Recipe Comments | From the recipe page select a recipe to view the Recipe details, where you can locate the recipe comments.  | The user is able to read the comments and share their own thoughts with the community. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
