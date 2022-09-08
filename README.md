@@ -534,3 +534,13 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
+
+4. As a first time user I want to know about the website and its ethos so that I know I am getting a good service and unbiased opinion.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Welcome Message/ Ethos | From any page on the website, use the Navbar to navigate to the home page and view the Welcome message. | Read about the company, what we do and its ethos. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
