@@ -567,3 +567,14 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+7. As a returning user I would like to be able to upload my own recipes to share with the community so that I can get their thoughts and feedback on my recipes.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Add and Edit Recipes | From any page and when signed into an account, using the Navbar, navigate to the 'Add and Edit Recipes' page where you can add a recipe or edit a current one.  | The user can add a new recipe to the website or edit an existing one that they have input. | Works as expected |
+| Recipe Comments | From the recipe page select a recipe to view the Recipe details, where you can locate the recipe comments.  | The user is able to read the comments and share their own thoughts with the community. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
