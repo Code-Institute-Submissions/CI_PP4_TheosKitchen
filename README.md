@@ -510,3 +510,27 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
+
+3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Recipe List | From any page on the website use the Navbar to navigate to the Recipes page. | See a list of all the recipes orders by their ratings | Works as expected |
+| Categories | From any page on the website use the Navbar to navigate to the Categories page. | See a list of all the Categories on the website. | Works as expected |
+| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
+3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Recipe List | From any page on the website use the Navbar to navigate to the Recipes page. | See a list of all the recipes orders by their ratings | Works as expected |
+| Categories | From any page on the website use the Navbar to navigate to the Categories page. | See a list of all the Categories on the website. | Works as expected |
+| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
