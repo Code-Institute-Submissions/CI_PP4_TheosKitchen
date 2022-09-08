@@ -1,9 +1,19 @@
-from django.shortcuts import render
+from django.views import View
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
-from .models import Recipe
+from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+from .models import Recipe, Comment
+from .forms import CommentForm
 
 
 def categories(request):
+    """
+    Renders the categories page.
+    """
     return render(request, 'categories.html')
 
 
@@ -14,7 +24,7 @@ def error_500(request):
 
 def categories_view(request, cats):
     """
-    Renders the recipes filtered by categories
+    Renders the recipes filtered by categories.
     """
     categories_list = Recipe.objects.filter(
         categories__title__contains=cats, status=1)
@@ -23,6 +33,9 @@ def categories_view(request, cats):
 
 
 class Featured(generic.ListView):
+    """
+    Renders the Featured model for the home page.
+    """
     model = Recipe
     queryset = Recipe.objects.filter(featured=True).order_by('-rating')
     template_name = 'index.html'
@@ -30,7 +43,95 @@ class Featured(generic.ListView):
 
 
 class RecipeList(generic.ListView):
+    """
+    Renders the Recipe List model recipes page and categoy page.
+    """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-rating')
     template_name = 'recipes.html'
     paginate_by = 6
+
+
+class RecipeDetail(View):
+    """
+    Renders the RecipeDetail model for the recipe_detail page.
+    """
+    def get(self, request, slug):
+        queryset = Recipe.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-timestamp")
+        number_comments = Comment.objects.filter(post=post).count()
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+
+        return render(request, "recipe_detail.html", {
+                "post": post,
+                "comments": comments,
+                "commented": False,
+                "liked": liked,
+                "comment_form": CommentForm(),
+                'number_comments': number_comments,
+            },
+        )
+
+    def post(self, request, slug):
+        """
+        Comment on the posts
+        """
+        queryset = Recipe.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-timestamp")
+        liked = False
+
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.author = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.post = post
+            comment.save()
+            messages.success(request, """
+            Your comment was sent successfully and is awaiting approval!""")
+        else:
+            comment_form = CommentForm()
+        return render(
+            request,
+            "recipe_detail.html",
+            {
+                "post": post,
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
+                "liked": liked,
+            },
+        )
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Delete user Comments from recipes
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    comment.delete()
+    messages.success(request, 'The comment was deleted successfully')
+    return HttpResponseRedirect(reverse(
+        'recipe_detail', args=[comment.post.slug]))
+
+
+class RecipeLike(LoginRequiredMixin, View):
+    """
+    Allows users to Like and and unlike Recipes
+    """
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Recipe, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+            messages.success(request, 'You have unliked this post.')
+        else:
+            post.likes.add(request.user)
+            messages.success(request, 'You have liked this post, thanks!')
+        return HttpResponseRedirect(
+            reverse('recipe_detail', args=[slug]))

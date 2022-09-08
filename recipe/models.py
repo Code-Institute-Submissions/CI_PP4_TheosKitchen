@@ -65,6 +65,10 @@ class Comment(models.Model):
         User, on_delete=models.CASCADE, related_name="comment_post")
     content = models.TextField()
     approved = models.BooleanField(default=False)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["timestamp"]
 
     def __str__(self):
         return f"Comment {self.content} by {self.author}"

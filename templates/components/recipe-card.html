@@ -2,7 +2,7 @@
 
 <div class="col-md-2">
     <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
+        <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
         <div class="card-body">
           <h5 class="card-title">{{ recipe.recipe_name }}</h5>
         </div>
@@ -12,8 +12,7 @@
           <li class="list-group-item">Recipe owner: {{ recipe.author }}</li>
         </ul>
         <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
+          <a href="{% url 'recipe_detail' recipe.slug %}" class="card-link">Recipe Details</a>
           <hr />
             <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                 {{ recipe.number_of_likes }}</p>
