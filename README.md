@@ -35,9 +35,11 @@ Theo's kitchen is a website that inspire's people to create and share their reci
     4. [Python Validation](#python-validation)
     5. [Accessibility](#accessibility)
     6. [Performance](#performance)
-    6. [Device Testing](#device-testing)
-    6. [Browser Compatibility](#browser-compatibility)
+    7. [Device Testing](#device-testing)
+    8. [Browser Compatibility](#browser-compatibility)
 8. [Testing user stories](#testing-user-stories)
+    1. [Manual Testing](#manual-testing)
+    2. [Automated Testing](#automated-testing)
 9. [Bugs](#bugs)
 10. [Deployment](#deployment)
 11. [Credits](#credits)
@@ -650,3 +652,48 @@ The website was tested on the following browsers in both regular and incognito m
 
 [Back to Table Of Content](#table-of-content)
 
+### Automated Testing
+<br>
+
+
+[Back to Table Of Content](#table-of-content)
+
+## Bugs
+| **Bug** | **Fix** |
+| ------- | ------- |
+|  |  |
+
+[Back to Table Of Content](#table-of-content)
+
+## Deployment
+
+### Heroku
+This application has been deployed from GitHub to Heroku by following the steps:
+
+1. Create or log in to your account at heroku.com
+2. Create a new app, add a unique app name and choose your region
+3. Click on create app
+4. Go to "Settings"
+5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
+6. Add required buildpacks (further dependencies). For this project, I set up 'Python' and 'node.js' in that order.
+7. Go to "Deploy" and select "GitHub" in "Deployment method"
+8. To link up our Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
+9.  Choose the branch you want to build your app from
+10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+   
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone <span>https://</span>github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone
+
+[Back to Table Of Content](#table-of-content)
