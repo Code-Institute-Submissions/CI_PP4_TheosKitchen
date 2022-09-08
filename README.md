@@ -578,3 +578,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+8. As the website owner I there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
