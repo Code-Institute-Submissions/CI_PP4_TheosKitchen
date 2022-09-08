@@ -618,3 +618,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+12. As the website owner I want users to create and manage their own accounts so that they can engage in conversation, favorite recipes and add their own.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| User Sign Up | From any page of the website, using the Navbar, navigate to the 'User Sign up' page and fill out the form. | The user is able to create and account and will be redirected to the account page after completion. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
