@@ -588,3 +588,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+9. As the website owner I want the recipes divided into categories so that users looking for something specific can navigate easier.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Categories | From any page of the website, use the Navbar to navigate to the categories page and select a category from the list shown. | The user is taken to a Category page with only recipes specific to this category type. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
