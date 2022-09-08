@@ -486,3 +486,17 @@ The website was tested on the following browsers in both regular and incognito m
 - Mozilla Firefox
 - Microsoft Edge
 
+## Testing user stories
+### Manual Testing
+<br>
+1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navbar / Dropdown Menu | On any page of the website, at the top of the page, find the Navbar and use it to navigate to a new page | Navbar link takes you to the selected page | Works as expected |
+| Footer | On any page of the website, at the bottom of the page, locate the footer containing contact and social media information | Footer is located at the bottom of every page. | Works as expected |
+| Error Pages | From any page on the website, go to the URL bar and add onto the end of the url a random string on characters to be redirected to an error page | The error page loads as expected. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
