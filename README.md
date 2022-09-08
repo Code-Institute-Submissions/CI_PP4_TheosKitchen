@@ -598,3 +598,13 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+10. As the website owner I want the website to act responsively to all device sizes so that the website can be viewed across all devices.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Responsive Design | Using Google Chrome Brower and on any page of the website, open chrome developer tools and resize the webpage. | The webpage reacts responsively and any elements that require resizing are downsized for smaller screens. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
