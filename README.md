@@ -638,3 +638,15 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
+14. As the website owner I want to be able to manually approve comments so that all comments meet the website's ethos.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Recipe Comments | As the website admin and from the home page of the website, go to the url bar and add '/admin' to the end of the url to access the admin panel, locate the comments option and filter by not approved, read and make sure the comments meet the websites, guidelines before approving the comment. | The comment gets approved and becomes visible on the normal website for everyone to see. | Works as expected |
+<details><summary>Screenshots</summary>
+<img src="documentation/user-story-testing/user-story-x.jpg">
+</details>
+<br>
+
+[Back to Table Of Content](#table-of-content)
+
