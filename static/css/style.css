@@ -62,9 +62,6 @@ main p, main h1, .footer p, .nav-link, .social-networks {
     background-image: var(--toggler)
 }
 
-/* Footer Styles */
-
-
 /* Theme Switch Styles */
 .switch {
     width: 60px;
@@ -99,4 +96,11 @@ main p, main h1, .footer p, .nav-link, .social-networks {
 
 input:checked + .slider {
     transform: translateX(30px);
+}
+
+
+/* Recipe Details Styles */
+
+.post-content-img {
+    width: 100%;
 }

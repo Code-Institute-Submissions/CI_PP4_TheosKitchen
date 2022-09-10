@@ -5,7 +5,7 @@ from .models import Comment
 
 class CommentForm(forms.ModelForm):
     """
-    Form users to post thier comments.
+    Form users to post their comments.
     """
     class Meta:
         model = Comment

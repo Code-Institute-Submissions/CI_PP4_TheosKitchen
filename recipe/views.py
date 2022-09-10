@@ -44,7 +44,7 @@ class Featured(generic.ListView):
 
 class RecipeList(generic.ListView):
     """
-    Renders the Recipe List model recipes page and categoy page.
+    Renders the Recipe List model recipes page and category page.
     """
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-rating')
@@ -133,5 +133,4 @@ class RecipeLike(LoginRequiredMixin, View):
         else:
             post.likes.add(request.user)
             messages.success(request, 'You have liked this post, thanks!')
-        return HttpResponseRedirect(
-            reverse('recipe_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))

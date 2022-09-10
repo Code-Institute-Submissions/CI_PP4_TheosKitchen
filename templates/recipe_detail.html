@@ -9,30 +9,30 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto p-md-3">
-                <img class="post-content-img" src="{{ recipe.featured_image.url }}" alt="{{ recipe.title }} Image">
+                <img class="post-content-img" src="{{ post.featured_image.url }}" alt="{{ post.recipe_name }} Image">
                 <div class="content-description">
-                    <h2>{{ recipe.title }}</h2>
-                    {% for cat in recipe.categories.all %}
+                    <h2>{{ post.recipe_name }}</h2>
+                    {% for cat in post.categories.all %}
                     <h4 class="pt-3">{{ cat }}</h4>
                     {% endfor %}
-                    <h3>{{ recipe.time_taken }}</h3>
+                    <h3>{{ post.time_taken }} Minutes</h3>
                     <span>
-                        {% if recipe.stars == 5 %}
+                        {% if post.rating == 5 %}
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        {% elif recipe.stars == 4 %}
+                        {% elif post.rating == 4 %}
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        {% elif recipe.stars == 3 %}
+                        {% elif post.rating == 3 %}
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
-                        {% elif recipe.stars == 2 %}
+                        {% elif post.rating == 2 %}
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                         {% else%}
@@ -41,35 +41,33 @@
                     </span>
                 </div>
                 <div class="author-info">
-                    <span>{{ recipe.author }}| </span>
+                    <span>{{ post.author }}| </span>
                     {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
+                    <form class="d-inline" action="{% url 'recipe_like' post.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
-                        <button type="submit" name="blogpost_id" value="{{ recipe.slug }}">
-                            <span><i class="fas fa-heart"></i>{{ recipe.number_of_likes }}</span>
+                        <button type="submit" name="blogpost_id" value="{{ post.slug }}">
+                            <span><i class="fas fa-heart"></i>{{ post.number_of_likes }}</span>
                         </button>
                         {% else %}
-                        <button type="submit" name="blogpost_id" value="{{ recipe.slug }}">
-                            <span><i class="far fa-heart"></i>{{ recipe.number_of_likes }}</span>
+                        <button type="submit" name="blogpost_id" value="{{ post.slug }}">
+                            <span><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
+                        </button>
                         {% endif %}
                     </form>
                     {% else %}
-                    <span class="text-secondary"><i class="far fa-heart"></i>{{ recipe.number_of_likes }}</span>
+                    <span class="text-secondary"><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
                     {% endif %}
                     <span class="text-secondary">| <i class="far fa-comments"></i>{{ number_comments }}</span>
                 </div>
                 <div class="post-text-content mt-3">
-                    <h4>{{ recipe.overview }}</h4>
+                    <h3>{{ post.description | safe }}</h3>
                 </div>
+                <hr>
                 <div class="ingredients-box mt-3">
-                    {{ recipe.content | safe }}
-                </div>
-                <div class="enjoy-box mb-5">
-                    <span>Enjoy!!</span>
+                    {{ post.instructions | safe }}
                 </div>
                 <div class="post-comments">
-                    <hr class="hr-small">
                     <div class="comment-form">
                         <hr class="hr-small">
                         {% if commented %}
@@ -83,7 +81,7 @@
                         <form method="post">
                             {% csrf_token %}
                             {{ comment_form | crispy }}
-                            <button type="submit" class="btn btn-signup btn-lg mt-5 mb-5">Submit</button>
+                            <button type="submit" class="btn mt-3 mb-3">Submit</button>
                         </form>
                         {% endif %}
                         {% endif %}
@@ -105,8 +103,8 @@
                         </div>
                     </div>
                     {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
-                   <!-- <a href="{% url 'edit_comment' comment.id %}" class="btn-edit btn-sm btn-secondary mb-3" aria-label="Go to the Edit Comments Page">Edit</a> -->
-                    <button type="button" class="btn-delete btn-sm btn-danger mb-3" data-bs-toggle="modal"
+                   <!-- <a href="{% url 'edit_comment' comment.id %}" class="btn mb-3" aria-label="Go to the Edit Comments Page">Edit</a> -->
+                    <button type="button" class="btn mb-3" data-bs-toggle="modal"
                         data-bs-target="#delete-comment">Delete</button>
                     <!-- Delete comment bootstrap modal-->
                     <div class="modal fade" id="delete-comment"
@@ -120,7 +118,7 @@
                                     Are you sure you want to delete your comment?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
+                                    <button type="button" class="btn"
                                         data-bs-dismiss="modal">Close</button>
                                     <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger" aria-label="Delete Comment">Delete</a>
                                 </div>

@@ -38,7 +38,7 @@ class Recipe(models.Model):
     instructions = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
-        User, related_name='recipe_likes', blank=True)
+        User, related_name='recipe_like', blank=True)
     featured = models.BooleanField()
     time_taken = models.IntegerField(default=0)
     rating = models.PositiveIntegerField(
@@ -75,4 +75,4 @@ class Comment(models.Model):
 
     def set_slug(self):
         """Sets the slug"""
-        return reverse('comment', args=[self.post.slug])
+        return reverse('recipe_detail', args=[self.post.slug])
