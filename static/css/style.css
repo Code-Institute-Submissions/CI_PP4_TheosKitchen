@@ -46,6 +46,7 @@ main {
 
 main p, main h1, .footer p, .nav-link, .social-networks {
     color: var(--font-color);
+
 }
 
 .title {
@@ -98,9 +99,42 @@ input:checked + .slider {
     transform: translateX(30px);
 }
 
+/* Home Page Style */
+
+#welcome-message {
+    width: 40%;
+    margin: auto;
+}
+
 
 /* Recipe Details Styles */
 
 .post-content-img {
     width: 100%;
+}
+
+/* Card Styles */
+
+.card div {
+    height: 100px;
+}
+
+.card ul .card-description {
+    height: 175px;
+}
+
+/* Categories List Styles */
+
+.content-img {
+    contain: content;
+}
+
+.content-img img {
+    width: 400px;
+    margin: auto;
+}
+
+.category-titles {
+    text-decoration: none;
+    color: var(--font-color);
 }

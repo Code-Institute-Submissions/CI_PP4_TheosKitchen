@@ -79,12 +79,12 @@ Theo's kitchen is a website that inspire's people to create and share their reci
 ## User Stories
 1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
 2. As a first time user would like to be able to sign up for an account so that I can interact with the community.
-3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
+3. As a first time user I want to see the available recipes that are on the website so that I can learn to eat healthier.
 4. As a first time user I want to know about the website and its ethos so that I know I am getting a good service and unbiased opinion.
 5. As a first time user I want to know how to find social media links so that I can have in depth conversation with my peers. 
 6. As a returning user I would like to be able to favourite the recipes I like the most so that I can easily find them again later.
 7. As a returning user I would like to be able to upload my own recipes to share with the community so that I can get their thoughts and feedback on my recipes.
-8. As the website owner I there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
+8. As the website owner I want there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
 9. As the website owner I want the recipes divided into categories so that users looking for something specific can navigate easier.
 10. As the website owner I want the website to act responsively to all device sizes so that the website can be viewed across all devices.
 11. As the website owner I want users to get redirected to custom error pages so that they understand when when something has gone wrong and can be redirected back to the main website.
@@ -525,7 +525,7 @@ The website was tested on the following browsers in both regular and incognito m
 </details>
 <br>
 
-3. As a first time user I want to see the available recipes that are on the website so that I can learn eat healthier.
+3. As a first time user I want to see the available recipes that are on the website so that I can learn to eat healthier.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
@@ -573,14 +573,14 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Add and Edit Recipes | From any page and when signed into an account, using the Navbar, navigate to the 'Add and Edit Recipes' page where you can add a recipe or edit a current one.  | The user can add a new recipe to the website or edit an existing one that they have input. | Works as expected |
+| Add and Edit Recipes | From any page and when signed into an account, using the Navbar, navigate to the 'Account' page where you can find a list of the current recipes you have added or add a new one. | The user can add a new recipe to the website or edit an existing one that they have input using the form. | Works as expected |
 | Recipe Comments | From the recipe page select a recipe to view the Recipe details, where you can locate the recipe comments.  | The user is able to read the comments and share their own thoughts with the community. | Works as expected |
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
 <br>
 
-8. As the website owner I there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
+8. As the website owner I want there to be a section for featured recipes so that the admin approved 'best' recipes are shown first.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|

@@ -11,13 +11,13 @@
                 {{ categories }}
                 {% for category in categories_list %}
                 <div class="col-md-4">
-                    <a href="{% url 'categories_list' category %}" aria-label="Go to a list of all categories.">
+                    <a class="category-titles" href="{% url 'categories_list' category %}" aria-label="Go to a list of all categories.">
                         <div class="content-img">
                             <div class="overlay"></div>
                             <img src="{{ category.category_image.url}}"
                             alt=" {{ category.title }} Image">
                             <div>
-                                <h3>{{ category.title }}</h3>
+                                <h3 class="title text-center category-titles">{{ category.title }}</h3>
                             </div>
                         </div>
                     </a>
