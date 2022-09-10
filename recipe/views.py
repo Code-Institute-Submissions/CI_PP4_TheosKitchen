@@ -1,11 +1,13 @@
-from django.views import View
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
-from django.http import HttpResponseRedirect
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.shortcuts import render, get_object_or_404, reverse
+from django.views import View
+from django.views import generic
+from django.views.generic import UpdateView
+from django.http import HttpResponseRedirect
+from django.core.paginator import Paginator
 from .models import Recipe, Comment
 from .forms import CommentForm
 
@@ -28,6 +30,11 @@ def categories_view(request, cats):
     """
     categories_list = Recipe.objects.filter(
         categories__title__contains=cats, status=1)
+    paginator = Paginator(categories_list, 6)
+
+    page_number = request.GET.get('page')
+    categories_list = paginator.get_page(page_number)
+
     return render(request, 'category.html', {
         'cats': cats.title(), 'categories_list': categories_list})
 
@@ -88,7 +95,7 @@ class RecipeDetail(View):
             liked = True
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
-            comment_form.instance.author = request.user.username
+            comment_form.instance.author = request.user
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
@@ -134,3 +141,13 @@ class RecipeLike(LoginRequiredMixin, View):
             post.likes.add(request.user)
             messages.success(request, 'You have liked this post, thanks!')
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    """
+     Allow users to edit their comments.
+    """
+    model = Comment
+    template_name = 'edit_comment.html'
+    form_class = CommentForm
+    success_message = 'The comment was successfully updated'

@@ -10,3 +10,12 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('content', )
+
+
+class UserUpdateForm(forms.ModelForm):
+    """
+    Form for profile name update
+    """
+    class Meta:
+        model = User
+        fields = ('username',)

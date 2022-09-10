@@ -60,11 +60,11 @@
                     {% endif %}
                     <span class="text-secondary">| <i class="far fa-comments"></i>{{ number_comments }}</span>
                 </div>
-                <div class="post-text-content mt-3">
+                <div class="post-description mt-3">
                     <h3>{{ post.description | safe }}</h3>
                 </div>
                 <hr>
-                <div class="ingredients-box mt-3">
+                <div class="instructions-box mt-3">
                     {{ post.instructions | safe }}
                 </div>
                 <div class="post-comments">
@@ -95,15 +95,15 @@
                     <span class="text-secondary"><i class="far fa-comments"></i>{{ num_comments }}</span>
                     {% for comment in comments %}
                     <div class="users-comments">
-                        <span>{{ comment.name | slice:":10"}} | </span>
+                        <span>{{ comment.author | slice:":10"}} | </span>
                         <span><i class="fas fa-clock"></i> {{ comment.timestamp }}</span>
                         <div class="user-comment">
                             <p class="user-comment-title"></p>
-                            <div class="mt-3 w-75"><i class="far fa-comment-dots"></i>{{ comment.body | linebreaks }}</div>
+                            <div class="mt-3 w-75"><i class="far fa-comment-dots"></i>{{ comment.content | linebreaks }}</div>
                         </div>
                     </div>
-                    {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
-                   <!-- <a href="{% url 'edit_comment' comment.id %}" class="btn mb-3" aria-label="Go to the Edit Comments Page">Edit</a> -->
+                    {% if user.is_authenticated and user.username == comment.author or user.is_superuser %}
+                    <a href="{% url 'edit_comment' comment.id %}" class="btn mb-3" aria-label="Go to the Edit Comments Page">Edit</a>
                     <button type="button" class="btn mb-3" data-bs-toggle="modal"
                         data-bs-target="#delete-comment">Delete</button>
                     <!-- Delete comment bootstrap modal-->

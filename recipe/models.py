@@ -61,8 +61,7 @@ class Comment(models.Model):
     """
     post = models.ForeignKey(
         Recipe, on_delete=models.CASCADE, related_name='comments')
-    author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="comment_post")
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.TextField()
     approved = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
@@ -72,7 +71,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.content} by {self.author}"
-
-    def set_slug(self):
-        """Sets the slug"""
-        return reverse('recipe_detail', args=[self.post.slug])
