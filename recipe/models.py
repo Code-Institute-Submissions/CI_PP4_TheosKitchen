@@ -71,3 +71,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.content} by {self.author}"
+
+    def get_absolute_url(self):
+        """Sets absolute URL"""
+        return reverse('recipe_detail', args=[self.post.slug])
