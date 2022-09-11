@@ -1,3 +1,6 @@
+"""
+Defines the data structure and field types
+"""
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
@@ -17,10 +20,11 @@ class Category(models.Model):
     category_image = CloudinaryField('image', default='placeholder')
 
     def __str__(self):
+        # Returns the category title
         return self.title
 
     def set_slug(self):
-        """Sets the slug"""
+        # Sets the slug
         return reverse('category', args=[self.title.slug])
 
 
@@ -49,9 +53,11 @@ class Recipe(models.Model):
         ordering = ['-rating']
 
     def __str__(self):
+        # Returns the recipe name
         return self.recipe_name
 
     def number_of_likes(self):
+        # Returns the number of likes
         return self.likes.count()
 
 
@@ -70,8 +76,9 @@ class Comment(models.Model):
         ordering = ["timestamp"]
 
     def __str__(self):
+        # Returns the comment content and author
         return f"Comment {self.content} by {self.author}"
 
     def get_absolute_url(self):
-        """Sets absolute URL"""
+        """Sets the slug"""
         return reverse('recipe_detail', args=[self.post.slug])

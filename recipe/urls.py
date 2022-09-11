@@ -1,7 +1,8 @@
+"""
+URL path patterns
+"""
 from django.urls import path
-from .forms import CommentForm
 from . import views
-from .views import *
 
 
 urlpatterns = [

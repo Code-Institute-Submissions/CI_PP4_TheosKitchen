@@ -1,3 +1,6 @@
+"""
+Views to create the webpage from the model and HTML templates
+"""
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required

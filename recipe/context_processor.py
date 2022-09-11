@@ -1,3 +1,6 @@
+"""
+Context Processor for Navbar
+"""
 from .models import Category
 
 

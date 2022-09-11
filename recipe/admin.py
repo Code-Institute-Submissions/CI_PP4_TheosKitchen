@@ -1,3 +1,6 @@
+"""
+Admin Panel Setup
+"""
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Recipe, Category, Comment
@@ -29,7 +32,7 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """
-    Add fields to search and approve Disscussion comments.
+    Add fields to search and approve comments.
     """
     list_display = ('post', 'author', 'content', 'approved')
     list_filter = ('approved', 'author')
