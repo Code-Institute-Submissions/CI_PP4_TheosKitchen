@@ -1,13 +1,14 @@
 {% load static %}
-
+<!-- Recipe Pagination -->
 <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
+        <!-- Takes user to the next page -->
         {% if page_obj.has_previous %}
         <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
         {% endif %}
+        <!-- Takes user to the last page -->
         {% if page_obj.has_next %}
         <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
         {% endif %}
     </ul>
 </nav>

@@ -3,29 +3,36 @@
 <!-- NavBar -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
+        <!-- NavBar brand -->
         <a class="navbar-brand" href="{% url 'Home' %}">
             <img src="{% static 'images/favicon.ico' %}" alt="" width="30" height="24">
         </a>
+        <!-- Hamburger Icon -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <!-- NavBar List -->
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Home Page -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'Home' %}">Home</a>
                 </li>
                 {% if user.is_authenticated %}
+                    <!-- Logout User -->
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <!-- User Account Page -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Account</a>
                     </li>
                 {% else %}
-                <!-- User Signup / Login -->
+                <!-- User Login -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                 </li>
+                <!-- User Signup -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'account_signup' %}">Signup</a>
                 </li>
@@ -34,18 +41,21 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle active" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Categories Page -->
                         <li>
                             <a class="dropdown-item" href="/categories" aria-label="Go to the categories page">Categories</a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        <!-- For List of Categories -->
                         {% for category in categories_list %}
                             <li>
                                 <a class="dropdown-item" href="{% url 'categories_list' category %}" aria-label="Go to the this category.">{{ category.title }}</a>
                             </li>
                         {% endfor%}
                     </ul>
+                <!-- Recipes Page -->
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'recipes' %}">Recipe's</a>
                 </li>

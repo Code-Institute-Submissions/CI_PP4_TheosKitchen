@@ -2,16 +2,20 @@
 
 <div class="col-md-2">
     <div class="card" style="width: 18rem;">
+        <!-- Recipe featured image. -->
         <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
         <div class="card-body">
+          <!-- Recipe name -->
           <h5 class="card-title">{{ recipe.recipe_name }}</h5>
         </div>
+        <!-- Basic recipe information. -->
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Time Taken: {{ recipe.time_taken }} minutes</li>
           <li class="list-group-item card-description">{{ recipe.description |safe }}</li>
           <li class="list-group-item">Recipe owner: {{ recipe.author }}</li>
         </ul>
         <div class="card-body">
+          <!-- Link to recipe details and number of likes. -->
           <a href="{% url 'recipe_detail' recipe.slug %}" class="card-link">Recipe Details</a>
           <hr />
             <p class="card-text text-muted h6"><i class="far fa-heart"></i>
@@ -19,6 +23,7 @@
         </div>
     </div>
 </div>
+<!-- Split the cards into columns. -->
 {% if forloop.counter|divisibleby:3 %}
 </div>
 <div class="row justify-content-md-center mt-5">
