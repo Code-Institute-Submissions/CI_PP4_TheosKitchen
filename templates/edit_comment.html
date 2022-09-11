@@ -2,12 +2,14 @@
 {% load static %}
 {% block content %}
 
-    <!-- UPDATE COMMENT SECTION -->
-    <div class="edit-comments container box-shadow">
+    <!-- Edit comments -->
+    <div class="container box-shadow">
         <div class="row">
             <div class="col-12 text-center">
+                <!-- Title and User -->
                 <h1 class="title">Edit Comment</h1>
                 <p>Edit comment as: {{ user.username | slice:":10" }}</p>
+                <!-- Edit comment form -->
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form.as_p }}
@@ -16,6 +18,4 @@
             </div>
         </div>
     </div>
-    <!-- END UPDATE COMMENT SECTION  -->
-
     {% endblock content %}

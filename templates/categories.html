@@ -8,14 +8,11 @@
         <h1 class="title text-center">Categories</h1>
         <div class="container box-shadow">
             <div class="row">
-                {{ categories }}
                 {% for category in categories_list %}
                 <div class="col-md-4">
                     <a class="category-titles" href="{% url 'categories_list' category %}" aria-label="Go to a list of all categories.">
                         <div class="content-img">
-                            <div class="overlay"></div>
-                            <img src="{{ category.category_image.url}}"
-                            alt=" {{ category.title }} Image">
+                            <img src="{{ category.category_image.url}}" alt=" {{ category.title }} Image">
                             <div>
                                 <h3 class="title text-center category-titles">{{ category.title }}</h3>
                             </div>

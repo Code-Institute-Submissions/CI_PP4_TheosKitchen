@@ -4,18 +4,22 @@
 {% block content %}
 {% load crispy_forms_tags %}
 
-<!-- POST SECTION> -->
+<!-- Recipe Details -->
 <section>
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto p-md-3">
                 <img class="post-content-img" src="{{ post.featured_image.url }}" alt="{{ post.recipe_name }} Image">
-                <div class="content-description">
+                <div>
+                    <!-- Recipe name -->
                     <h2>{{ post.recipe_name }}</h2>
+                    <!-- List of recipe titles -->
                     {% for cat in post.categories.all %}
                     <h4 class="pt-3">{{ cat }}</h4>
                     {% endfor %}
+                    <!-- Time taken -->
                     <h3>{{ post.time_taken }} Minutes</h3>
+                    <!-- Recipe rating -->
                     <span>
                         {% if post.rating == 5 %}
                         <i class="fas fa-star"></i>
@@ -40,8 +44,10 @@
                         {% endif %}
                     </span>
                 </div>
-                <div class="author-info">
+                <div>
+                    <!-- Recipe author -->
                     <span>{{ post.author }}| </span>
+                    <!-- Form to like/unlike a recipe -->
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'recipe_like' post.slug %}" method="POST">
                         {% csrf_token %}
@@ -56,25 +62,32 @@
                         {% endif %}
                     </form>
                     {% else %}
+                    <!-- Lists number of likes -->
                     <span class="text-secondary"><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
                     {% endif %}
+                    <!-- Number of comments -->
                     <span class="text-secondary">| <i class="far fa-comments"></i>{{ number_comments }}</span>
                 </div>
-                <div class="post-description mt-3">
+                <div class="mt-3">
+                    <!-- Recipe description -->
                     <h3>{{ post.description | safe }}</h3>
                 </div>
                 <hr>
-                <div class="instructions-box mt-3">
+                <div class="mt-3">
+                    <!-- Recipe instruction -->
                     {{ post.instructions | safe }}
                 </div>
+                <!-- Comments form -->
                 <div class="post-comments">
                     <div class="comment-form">
                         <hr class="hr-small">
+                        <!-- Comment alert success message -->
                         {% if commented %}
                         <div class="alert alert-success" role="alert">
                             Thanks {{ user.username }}. Your comment is awaiting approval!
                         </div>
                         {% else %}
+                        <!-- User taken crispy form for textbox -->
                         {% if user.is_authenticated %}
                         <h4>Leave a Comment</h4>
                         <p>Posting as: {{ user.username | slice:":10"}}</p>
@@ -92,20 +105,27 @@
                     {% else %}
                     <h4>No comments yet:</h4>
                     {% endif %}
-                    <span class="text-secondary"><i class="far fa-comments"></i>{{ num_comments }}</span>
+                    <!-- Number of comments -->
+                    <span class="text-secondary"><i class="far fa-comments"></i>{{ number_comments }}</span>
+                    <!-- list of comments -->
                     {% for comment in comments %}
                     <div class="users-comments">
+                        <!-- Comment author -->
                         <span>{{ comment.author | slice:":10"}} | </span>
+                        <!-- Comment timestamp -->
                         <span><i class="fas fa-clock"></i> {{ comment.timestamp }}</span>
+                        <!-- Comment content -->
                         <div class="user-comment">
                             <p class="user-comment-title"></p>
                             <div class="mt-3 w-75"><i class="far fa-comment-dots"></i>{{ comment.content | linebreaks }}</div>
                         </div>
                     </div>
+                    <!-- Check if user is the same as author or is superuser -->
                     {% if user.is_authenticated and user.username == comment.author or user.is_superuser %}
+                    <!-- Edit comment button -->
                     <a href="{% url 'edit_comment' comment.id %}" class="btn mb-3" aria-label="Go to the Edit Comments Page">Edit</a>
-                    <button type="button" class="btn mb-3" data-bs-toggle="modal"
-                        data-bs-target="#delete-comment">Delete</button>
+                    <!-- Delete comment button, opens modal -->
+                    <button type="button" class="btn mb-3" data-bs-toggle="modal" data-bs-target="#delete-comment">Delete</button>
                     <!-- Delete comment bootstrap modal-->
                     <div class="modal fade" id="delete-comment"
                         tabindex="-1" aria-hidden="true">

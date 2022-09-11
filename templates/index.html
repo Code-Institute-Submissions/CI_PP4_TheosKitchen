@@ -2,27 +2,26 @@
 {% load static %}
 
 {% block content %}
-
+<!-- Title and Welcome message -->
 <h1 class="title text-center">Theo's Kitchen</h1>
 <p class="text-center" id="welcome-message">
     Theo's kitchen is a website that is designed to inspire people to create and share their recipes with each other while teaching others.
     People can learn to cook, start a healthy diet or simply try something new. There are lots of things you can try and you can interact 
     with the community on the website and on other social media platforms as well.
 </p>
-
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-
-        
         <!-- Recipe List -->
         <div class="col-12 mt-3">
             <div class="row justify-content-md-center mt-5">
+                <!-- For Loop to list all recipe cards -->
                 {% for recipe in recipe_list %}
                 {% include "components/recipe-card.html" %}
                 {% endfor %}
             </div>
         </div>
     </div>
+    <!-- Link to pagination -->
     {% if is_paginated %}
     {% include "components/pagination.html" %}
     {% endif %}
