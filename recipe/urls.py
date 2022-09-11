@@ -17,4 +17,5 @@ urlpatterns = [
           name="delete_comment"),
      path('edit_comment/<int:pk>', views.EditComment.as_view(),
           name="edit_comment"),
+     # path('account/', views.account_view, name='account'),
 ]

@@ -5,11 +5,19 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.auth.forms import PasswordResetForm
+from django.contrib.auth.models import User
+from django.contrib.auth.tokens import default_token_generator
+from django.core.mail import send_mail, BadHeaderError
+from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.template.loader import render_to_string
+from django.db.models.query_utils import Q
 from django.views import View
+from django.utils.http import urlsafe_base64_encode
+from django.utils.encoding import force_bytes
 from django.views import generic
 from django.views.generic import UpdateView
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.paginator import Paginator
 from .models import Recipe, Comment
 from .forms import CommentForm
@@ -154,3 +162,22 @@ class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'edit_comment.html'
     form_class = CommentForm
     success_message = 'The comment was successfully updated'
+
+@login_required
+def account_view(request):
+    """
+    Takes users to their account page when signed in
+    """
+    if request.method == 'POST':
+        user_form = UserUpdateForm(request.POST, instance=request.user)
+        if user_form.is_valid():
+            user_form.save()
+            messages.success(request, 'Your account has been updated!')
+            return redirect('profile')
+    else:
+        user_form = UserUpdateForm(instance=request.user)
+
+    context = {
+        'user_form': user_form,
+    }
+    return render(request, 'account.html', context)

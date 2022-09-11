@@ -63,6 +63,8 @@ ACCOUNT_SIGNUP_REDIRECT_URL = "/profile"
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_EMAIL_REQUIRED = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
