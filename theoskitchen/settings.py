@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'recipe',
     "crispy_forms",
     "crispy_bootstrap5",
+    "anymail",
 ]
 
 
@@ -59,15 +60,29 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-ACCOUNT_SIGNUP_REDIRECT_URL = "/profile"
+ACCOUNT_SIGNUP_REDIRECT_URL = "/account"
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
 ACCOUNT_EMAIL_REQUIRED = True
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+EMAIL_BACKEND = 'anymail.backends.sendinblue.EmailBackend'
+ANYMAIL_SEND_DEFAULTS = {
+    "template_id": 3,
+    "params": {
+        "password_reset_url": "password_reset_url"
+    }
+}
+DEFAULT_FROM_EMAIL = 'admin@theoskitchen.com'
+SERVER_EMAIL = 'admin@theoskitchen.com'
+
+
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": os.environ.get('EMAIL_KEY'),
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
