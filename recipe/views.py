@@ -11,6 +11,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
+from allauth.account.forms import ChangePasswordForm
 from .models import Recipe, Comment
 from .forms import CommentForm, UserUpdateForm
 
@@ -33,6 +34,7 @@ def categories_view(request, cats):
     """
     categories_list = Recipe.objects.filter(
         categories__title__contains=cats, status=1)
+
     paginator = Paginator(categories_list, 6)
 
     page_number = request.GET.get('page')
@@ -156,21 +158,26 @@ class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = 'The comment was successfully updated'
 
 
-# @login_required
+@login_required
 def profile_(request):
     """
     Takes users to their profile page when signed in
     """
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        if user_form.is_valid():
+        password_reset_form = ChangePasswordForm(
+            request.POST, instance=request.user)
+        if user_form.is_valid() and password_reset_form.is_valid():
             user_form.save()
+            password_reset_form.save()
             messages.success(request, 'Your profile has been updated!')
             return redirect('profile')
     else:
         user_form = UserUpdateForm(instance=request.user)
+        password_reset_form = ChangePasswordForm()
 
     context = {
         'user_form': user_form,
+        'password_reset_form': password_reset_form,
     }
     return render(request, 'profile.html', context)

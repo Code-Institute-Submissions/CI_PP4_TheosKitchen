@@ -12,8 +12,10 @@
     --bodytext: 'Quicksand', 'sans-serif';
     --menu-color: #6dffc7;
     --underline-color: #5e0024;
-    --background-color: #bebebe;
+    --background-color: #646464;
+    --recipe-background: #bebebe;
     --font-color: #000;
+    --font-color-alt: #fff;
     --toggler: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     
 }
@@ -22,8 +24,10 @@
 .dark-theme{
     --menu-color: #5e0024;
     --underline-color: #a1ffdb;
-    --background-color: #646464;
+    --background-color: #bebebe;
+    --recipe-background: #646464;
     --font-color: #fff;
+    --font-color-alt: #000;
     --toggler: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -44,9 +48,12 @@ main {
     padding-bottom: 100px;
 }
 
-main p, main h1, .footer p, .nav-link, .social-networks {
+.footer p, .nav-link, .social-networks {
     color: var(--font-color);
+}
 
+main p, main h1, #recipe {
+    color: var(--font-color-alt);
 }
 
 .title {
@@ -113,6 +120,10 @@ input:checked + .slider {
     width: 100%;
 }
 
+#recipe {
+    background-color: var(--recipe-background);
+}
+
 /* Card Styles */
 
 .card div {
@@ -121,6 +132,10 @@ input:checked + .slider {
 
 .card ul .card-description {
     height: 175px;
+}
+
+.card-description p {
+    color: #000;
 }
 
 /* Categories List Styles */
