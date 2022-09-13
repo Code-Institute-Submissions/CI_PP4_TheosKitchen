@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!-- User Profile Page -->
+<section id="profile">
+    <h2 class="title mt-5">Profile Info</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Username: {{ user.username }}</h3>
+                <h3>Email: {{ user.email }}</h3>
+                {% if user.is_superuser %}
+                <h3>Status: Administrator</h3>
+                {% else %}
+                <h3>Status: User</h3>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <form class="form-control mt-5 box-shadow" id="signup_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form | crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn" type="submit">Update</button>
+    </form>
+</section>
+
+{% endblock content %}

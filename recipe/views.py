@@ -6,12 +6,13 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
 from .models import Recipe, Comment
-from .forms import CommentForm
+from .forms import CommentForm, UserUpdateForm
 
 
 def categories(request):
@@ -155,16 +156,16 @@ class EditComment(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_message = 'The comment was successfully updated'
 
 
-@login_required
-def account_view(request):
+# @login_required
+def profile_(request):
     """
-    Takes users to their account page when signed in
+    Takes users to their profile page when signed in
     """
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         if user_form.is_valid():
             user_form.save()
-            messages.success(request, 'Your account has been updated!')
+            messages.success(request, 'Your profile has been updated!')
             return redirect('profile')
     else:
         user_form = UserUpdateForm(instance=request.user)
@@ -172,4 +173,4 @@ def account_view(request):
     context = {
         'user_form': user_form,
     }
-    return render(request, 'account.html', context)
+    return render(request, 'profile.html', context)
