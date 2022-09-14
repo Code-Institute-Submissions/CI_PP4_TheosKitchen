@@ -48,7 +48,7 @@ main {
     padding-bottom: 100px;
 }
 
-.footer p, .nav-link, .social-networks {
+.nav-link, .social-networks {
     color: var(--font-color);
 }
 

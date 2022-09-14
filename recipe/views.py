@@ -32,16 +32,16 @@ def categories_view(request, cats):
     """
     Renders the recipes filtered by categories.
     """
-    categories_list = Recipe.objects.filter(
+    category = Recipe.objects.filter(
         categories__title__contains=cats, status=1)
 
-    paginator = Paginator(categories_list, 6)
+    paginator = Paginator(category, 6)
 
     page_number = request.GET.get('page')
-    categories_list = paginator.get_page(page_number)
+    category = paginator.get_page(page_number)
 
     return render(request, 'category.html', {
-        'cats': cats.title(), 'categories_list': categories_list})
+        'cats': cats.title(), 'category': category})
 
 
 class Featured(generic.ListView):
