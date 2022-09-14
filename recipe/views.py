@@ -166,12 +166,12 @@ def profile_(request):
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
         password_reset_form = ChangePasswordForm(
-            request.POST, instance=request.user)
+            request.POST)
         if user_form.is_valid() and password_reset_form.is_valid():
             user_form.save()
             password_reset_form.save()
             messages.success(request, 'Your profile has been updated!')
-            return redirect('profile')
+            return redirect('profile/')
     else:
         user_form = UserUpdateForm(instance=request.user)
         password_reset_form = ChangePasswordForm()
