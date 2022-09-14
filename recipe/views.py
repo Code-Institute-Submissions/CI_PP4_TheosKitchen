@@ -163,20 +163,21 @@ def profile_(request):
     """
     Takes users to their profile page when signed in
     """
+    user_form = UserUpdateForm(request.POST or None, instance=request.user)
+    password_reset_form = PasswordChangeForm(request.POST or None)
     if request.method == 'POST':
-        user_form = UserUpdateForm(request.POST, instance=request.user)
-        password_reset_form = PasswordChangeForm(request.POST)
-        if user_form.is_valid() and password_reset_form.is_valid():
-            user_form.save()
-            password_reset_form.save()
-            messages.success(request, 'Your profile has been updated!')
-            return redirect('profile/')
-    else:
-        user_form = UserUpdateForm(instance=request.user)
-        password_reset_form = PasswordChangeForm(request.user)
+        if 'user' in request.POST:
+            if user_form.is_valid():
+                user_form.save()
+                messages.success(request, 'Your profile has been updated!')
+                return redirect('profile')
+        elif 'password_reset' in request.POST:
+            if password_reset_form.is_valid():
+                password_reset_form.save()
+                messages.success(request, 'Your profile has been updated!')
+                return redirect('profile')
 
-    context = {
-        'user_form': user_form,
-        'password_reset_form': password_reset_form,
-    }
+    context = {'user_form': user_form,
+               'password_reset_form': password_reset_form}
+
     return render(request, 'profile.html', context)

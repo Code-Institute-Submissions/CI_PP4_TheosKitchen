@@ -12,11 +12,15 @@
                 <img class="post-content-img" src="{{ post.featured_image.url }}" alt="{{ post.recipe_name }} Image">
                 <div>
                     <!-- Recipe name -->
-                    <h2>{{ post.recipe_name }}</h2>
+                    <h2 class="mt-3">{{ post.recipe_name }}</h2>
                     <!-- List of recipe titles -->
+                    <div class="row">
                     {% for cat in post.categories.all %}
-                    <h4 class="pt-3">{{ cat }}</h4>
+                        <div class="col-md-auto">
+                            <h4 class="mt-3">{{ cat }}</h4>
+                        </div>
                     {% endfor %}
+                    </div>
                     <!-- Time taken -->
                     <h3>{{ post.time_taken }} Minutes</h3>
                     <!-- Recipe rating -->
@@ -44,7 +48,7 @@
                         {% endif %}
                     </span>
                 </div>
-                <div>
+                <div class="mt-3">
                     <!-- Recipe author -->
                     <span>{{ post.author }}| </span>
                     <!-- Form to like/unlike a recipe -->
