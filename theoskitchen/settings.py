@@ -62,7 +62,7 @@ INSTALLED_APPS = [
 ]
 
 
-SITE_ID = 1
+SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -75,12 +75,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 EMAIL_BACKEND = 'anymail.backends.sendinblue.EmailBackend'
-ANYMAIL_SEND_DEFAULTS = {
-    "template_id": 3,
-    "params": {
-        "password_reset_url": "password_reset_url"
-    }
-}
+
 DEFAULT_FROM_EMAIL = 'admin@theoskitchen.com'
 SERVER_EMAIL = 'admin@theoskitchen.com'
 
@@ -88,7 +83,6 @@ SERVER_EMAIL = 'admin@theoskitchen.com'
 ANYMAIL = {
     "SENDINBLUE_API_KEY": os.environ.get('EMAIL_KEY'),
 }
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

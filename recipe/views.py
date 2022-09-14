@@ -11,7 +11,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
-from allauth.account.forms import ChangePasswordForm
+from django.contrib.auth.forms import PasswordChangeForm
 from .models import Recipe, Comment
 from .forms import CommentForm, UserUpdateForm
 
@@ -165,8 +165,7 @@ def profile_(request):
     """
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST, instance=request.user)
-        password_reset_form = ChangePasswordForm(
-            request.POST)
+        password_reset_form = PasswordChangeForm(request.POST)
         if user_form.is_valid() and password_reset_form.is_valid():
             user_form.save()
             password_reset_form.save()
@@ -174,7 +173,7 @@ def profile_(request):
             return redirect('profile/')
     else:
         user_form = UserUpdateForm(instance=request.user)
-        password_reset_form = ChangePasswordForm()
+        password_reset_form = PasswordChangeForm(request.user)
 
     context = {
         'user_form': user_form,
