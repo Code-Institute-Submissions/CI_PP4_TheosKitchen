@@ -6,8 +6,8 @@
     border: none;
 }
 
-/* Root options */
-:root{
+/* Light Mode Theme */
+:root.light {
     --headertext: 'Inter', 'sans-serif';
     --bodytext: 'Quicksand', 'sans-serif';
     --menu-color: #0dcaf0;
@@ -19,7 +19,9 @@
 }
 
 /* Dark Mode Theme */
-.dark-theme{
+:root:not(.light) {
+    --headertext: 'Inter', 'sans-serif';
+    --bodytext: 'Quicksand', 'sans-serif';
     --menu-color: #084298;
     --background-color: #41464b;
     --recipe-background: #646464;
@@ -76,18 +78,18 @@ main h1, main h3, #recipe {
     text-indent: -200px
 }
 
-.switch span {
+:root:not(.light) .switch span {
     position: relative;
     display: block;
     width: 30px;
     height: 30px;
 }
 
-.switch input {
+:root:not(.light) .switch input {
     display: none;
 }
 
-.slider {
+:root:not(.light) .slider {
     transition: 0.4s;
     height: 30px;
     width: 30px;
@@ -96,8 +98,32 @@ main h1, main h3, #recipe {
     background: white;
 }
 
-input:checked + .slider {
+:root:not(.light) .slider {
+    transform: translateX(0px);
+}
+
+:root.light .slider {
     transform: translateX(30px);
+}
+
+:root.light .switch span {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+:root.light .switch input {
+    display: none;
+}
+
+:root.light .slider {
+    transition: 0.4s;
+    height: 30px;
+    width: 30px;
+    display: inline;
+    position: relative;
+    background: white;
 }
 
 /* Home Page Style */
