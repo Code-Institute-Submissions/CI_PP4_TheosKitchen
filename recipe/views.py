@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import update_session_auth_hash
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
@@ -175,6 +176,7 @@ def profile_(request):
             if password_reset_form.is_valid():
                 password_reset_form.save()
                 messages.success(request, 'Your profile has been updated!')
+                update_session_auth_hash(request, password_reset_form.user)
                 return redirect('profile')
 
     context = {'user_form': user_form,

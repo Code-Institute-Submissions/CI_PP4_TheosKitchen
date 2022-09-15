@@ -60,7 +60,9 @@
                     <a class="nav-link" href="{% url 'recipes' %}">Recipe's</a>
                 </li>
                 {% if user.is_superuser %}
-                <a class="btn" href="/admin" target="_blank" aria-label="Go to the Admin Panel">Admin Panel</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin" target="_blank" aria-label="Go to the Admin Panel">Admin Panel</a>
+                </li>
                 {% endif %}
             </ul>
             <!-- Theme switch toggle -->
