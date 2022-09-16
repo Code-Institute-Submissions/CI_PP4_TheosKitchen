@@ -52,7 +52,7 @@ class Featured(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(featured=True).order_by('-rating')
     template_name = 'index.html'
-    paginate_by = 6
+    paginate_by = 8
 
 
 class RecipeList(generic.ListView):
@@ -62,7 +62,7 @@ class RecipeList(generic.ListView):
     model = Recipe
     queryset = Recipe.objects.filter(status=1).order_by('-rating')
     template_name = 'recipes.html'
-    paginate_by = 6
+    paginate_by = 8
 
 
 class RecipeDetail(View):

@@ -1,12 +1,12 @@
 {% load static %}
 
-<div class="col-md-3">
-    <div class="card" style="width: 18rem;">
+<div class="col-lg-3 col-md-6 col-sm-8 my-3">
+    <div class="card">
         <!-- Recipe featured image. -->
         <img src="{{ recipe.featured_image.url }}" class="card-img-top" alt="{{ recipe.recipe_name }}">
         <div class="card-body">
           <!-- Recipe name -->
-          <h5 class="card-title">{{ recipe.recipe_name }}</h5>
+          <h5 class="card-title text-center">{{ recipe.recipe_name }}</h5>
         </div>
         <!-- Basic recipe information. -->
         <ul class="list-group list-group-flush">
@@ -24,7 +24,7 @@
     </div>
 </div>
 <!-- Split the cards into columns. -->
-{% if forloop.counter|divisibleby:3 %}
+{% if forloop.counter|divisibleby:4 %}
 </div>
-<div class="row justify-content-md-center mt-5">
+<div class="row justify-content-md-center">
 {% endif %}
