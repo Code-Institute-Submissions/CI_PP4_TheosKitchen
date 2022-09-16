@@ -34,7 +34,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = development
 
 if development:
-    ALLOWED_HOSTS = ['localhost', '*']
+    ALLOWED_HOSTS = ['localhost']
+    CSRF_TRUSTED_ORIGINS = ['https://*']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
@@ -55,9 +56,9 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'recipe',
-    "crispy_forms",
-    "crispy_bootstrap5",
-    "anymail",
+    'crispy_forms',
+    'crispy_bootstrap5',
+    'anymail',
 ]
 
 
@@ -87,7 +88,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-#   'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
