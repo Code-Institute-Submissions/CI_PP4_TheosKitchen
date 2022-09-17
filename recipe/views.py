@@ -163,12 +163,13 @@ def profile_(request):
     """
     Takes users to their profile page when signed in
     """
+    user = request.user
     favorites = Recipe.objects.filter(likes=request.user)
     personal_recipes = Recipe.objects.filter(author=request.user)
     user_form = UserUpdateForm(request.POST or None, instance=request.user)
-    password_change_form = PasswordChangeForm(request.POST or None)
+    password_change_form = PasswordChangeForm(user, request.POST or None)
     if request.method == 'POST':
-        if 'user' in request.POST:
+        if 'user_' in request.POST:
             if user_form.is_valid():
                 user_form.save()
                 messages.success(request, 'Your profile has been updated!')
@@ -176,7 +177,7 @@ def profile_(request):
             else:
                 messages.error(
                     request, 'Your profile could not be updated at this time.')
-        elif 'password_change' in request.POST:
+        elif 'password_' in request.POST:
             if password_change_form.is_valid():
                 password_change_form.save()
                 messages.success(request, 'Your password has been updated!')

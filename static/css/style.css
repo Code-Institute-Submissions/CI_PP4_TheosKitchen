@@ -200,7 +200,7 @@ main h1, main h3, #recipe, .comments,
 
 @media screen and (max-width: 1050px) {
     .card .list-group {
-        font-size: 85%;
+        font-size: 90%;
     }    
     
     .card-body h5 {
@@ -209,7 +209,17 @@ main h1, main h3, #recipe, .comments,
 }
 
 @media screen and (max-width: 900px) {
+    #recipe-list {
+        margin: auto;
+    }
 
+    .card .list-group {
+        font-size: 100%;
+    }    
+    
+    .card-body h5 {
+        font-size: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {

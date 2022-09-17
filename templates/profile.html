@@ -19,6 +19,7 @@
                         <h3>Status: User</h3>
                         {% endif %}
                     </div>
+                    <a class="btn mt-5" href="#">Add new recipe!</a>
                     <form class="form-control mt-5 box-shadow" id="signup_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ user_form | crispy }}
@@ -33,8 +34,7 @@
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <a href="{% url 'password_change' %}" class="btn" type="submit" name="action">{{ "Change Password" }}</a>
-                        <!-- <button class="btn" type="submit" name="action">{{ "Change Password" }}</button> -->
+                        <input onclick="location.href='{% url 'password_change' %}'" class="btn" type="button" name="action" value="{{ 'Change Password' }}">
                     </form>
                 </div>
             </div>
