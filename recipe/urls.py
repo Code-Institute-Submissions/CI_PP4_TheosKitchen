@@ -18,4 +18,5 @@ urlpatterns = [
           name="delete_comment"),
      path('edit_comment/<int:pk>', views.EditComment.as_view(),
           name="edit_comment"),
+     path('password_change', views.profile_, name="password_change"),
 ]

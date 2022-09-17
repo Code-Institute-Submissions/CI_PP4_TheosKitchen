@@ -35,7 +35,6 @@ DEBUG = development
 
 if development:
     ALLOWED_HOSTS = ['localhost']
-    CSRF_TRUSTED_ORIGINS = ['https://*']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 

@@ -66,6 +66,11 @@ main h1, main h3, #recipe {
     background-image: var(--toggler)
 }
 
+#favorites .nav-item, #personal_recipes .nav-item {
+    color: #000;
+    text-decoration: none;
+}
+
 .navbar-toggler {
     font-size: 30px;
     padding: 0;

@@ -5,7 +5,6 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.contrib.auth import update_session_auth_hash
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
@@ -105,8 +104,8 @@ class RecipeDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
-            messages.success(request, """
-            Your comment was sent successfully and is awaiting approval!""")
+            messages.success(
+                request, """Your comment was sent successfully and is awaiting approval!""")
         else:
             comment_form = CommentForm()
         return render(
@@ -164,22 +163,32 @@ def profile_(request):
     """
     Takes users to their profile page when signed in
     """
+    favorites = Recipe.objects.filter(likes=request.user)
+    personal_recipes = Recipe.objects.filter(author=request.user)
     user_form = UserUpdateForm(request.POST or None, instance=request.user)
-    password_reset_form = PasswordChangeForm(request.POST or None)
+    password_change_form = PasswordChangeForm(request.POST or None)
     if request.method == 'POST':
         if 'user' in request.POST:
             if user_form.is_valid():
                 user_form.save()
                 messages.success(request, 'Your profile has been updated!')
                 return redirect('profile')
-        elif 'password_reset' in request.POST:
-            if password_reset_form.is_valid():
-                password_reset_form.save()
-                messages.success(request, 'Your profile has been updated!')
-                update_session_auth_hash(request, password_reset_form.user)
+            else:
+                messages.error(
+                    request, 'Your profile could not be updated at this time.')
+        elif 'password_change' in request.POST:
+            if password_change_form.is_valid():
+                password_change_form.save()
+                messages.success(request, 'Your password has been updated!')
                 return redirect('profile')
+            else:
+                messages.error(
+                    request, 'your password could not be updated at this time')
 
     context = {'user_form': user_form,
-               'password_reset_form': password_reset_form}
+               'password_change_form': password_change_form,
+               'favorites': favorites,
+               'personal_recipes': personal_recipes,
+               }
 
-    return render(request, 'profile.html', context)
+    return render(request, 'profile.html', context,)

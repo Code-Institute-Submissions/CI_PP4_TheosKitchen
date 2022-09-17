@@ -7,10 +7,10 @@
 <div class="container">
     <div class="row">
         <div class="col-6 mt-3" id="profile">
-            <h2 class="title mt-5">Profile Info</h2>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
+                        <h2 class="title">Profile Information</h2>
                         <h3>Username: {{ user.username }}</h3>
                         <h3>Email: {{ user.email }}</h3>
                         {% if user.is_superuser %}
@@ -27,13 +27,14 @@
                         {% endif %}
                         <button class="btn" type="submit">Update</button>
                     </form>
-                    <form class="form-control mt-5 box-shadow" id="password_reset_form" method="post" action="{% url 'account_reset_password' %}" enctype="multipart/form-data">
+                    <form method="POST" id="password_change_form" action="{% url 'account_change_password' %}" class=" form-control mt-5 box-shadow">
                         {% csrf_token %}
-                        {{ password_reset_form | crispy }}
+                        {{ password_change_form | crispy }}
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <button class="btn" type="submit">Update</button>
+                        <a href="{% url 'password_change' %}" class="btn" type="submit" name="action">{{ "Change Password" }}</a>
+                        <!-- <button class="btn" type="submit" name="action">{{ "Change Password" }}</button> -->
                     </form>
                 </div>
             </div>
@@ -41,24 +42,23 @@
         <div class="col-6 mt-3">
             <div class="container">
                 <div class="row" id="favorites">
-                    <h2 class="title mt-5">Favorites</h2>
-                    <ul>
-                        {% for recipe in recipe_list %}
-                        <li>
-                            <a class="card-link" href="#" aria-label="go to this Recipe">test</a>
-                        </li> 
-                        <!-- {% url 'recipe_detail' recipe %} -->
+                    <h2 class="title">Favorites</h2>
+                    <ul class="form-control">
+                        {% for favorite in favorites %}
+                        <li class="list-group-item">
+                            <a class="nav-item" href="{% url 'recipe_detail' favorite.slug %}">{{ favorite.recipe_name }}</a>
+                        </li>
                         {% endfor %}
                     </ul>
                 </div>
                 <div class="row" id="personal_recipes">
-                    <h2 class="title mt-5">Personal Recipes</h2>
-                    <ul>
-                    {% for recipe in recipe_list %}
-                        <li>
-                            <a class="card-link" href="#" aria-label="go to this Recipe">test</a>
-                        </li> <!-- {% url 'recipe_list' edit %} -->
-                    {% endfor%}
+                    <h2 class="title mt-3">Personal Recipes</h2>
+                    <ul class="form-control">
+                        {% for author in personal_recipes %}
+                        <li class="list-group-item">
+                            <a class="nav-item" href="#">{{ author.recipe_name }}</a>
+                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
