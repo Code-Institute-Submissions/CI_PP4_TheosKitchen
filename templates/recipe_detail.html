@@ -56,21 +56,21 @@
                     <form class="d-inline" action="{% url 'recipe_like' post.slug %}" method="POST">
                         {% csrf_token %}
                         {% if liked %}
-                        <button type="submit" name="blogpost_id" value="{{ post.slug }}">
+                        <button id="like-button" type="submit" name="blogpost_id" value="{{ post.slug }}">
                             <span><i class="fas fa-heart"></i>{{ post.number_of_likes }}</span>
                         </button>
                         {% else %}
-                        <button type="submit" name="blogpost_id" value="{{ post.slug }}">
+                        <button id="like-button" type="submit" name="blogpost_id" value="{{ post.slug }}">
                             <span><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
                         </button>
                         {% endif %}
                     </form>
                     {% else %}
                     <!-- Lists number of likes -->
-                    <span class="text-secondary"><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
+                    <span><i class="far fa-heart"></i>{{ post.number_of_likes }}</span>
                     {% endif %}
                     <!-- Number of comments -->
-                    <span class="text-secondary">| <i class="far fa-comments"></i>{{ number_comments }}</span>
+                    <span class="comments">| <i class="far fa-comments comments"></i>{{ number_comments }}</span>
                 </div>
                 <div class="mt-3">
                     <!-- Recipe description -->
@@ -110,7 +110,7 @@
                     <h4>No comments yet:</h4>
                     {% endif %}
                     <!-- Number of comments -->
-                    <span class="text-secondary"><i class="far fa-comments"></i>{{ number_comments }}</span>
+                    <span class="comments"><i class="far fa-comments comments"></i>{{ number_comments }}</span>
                     <!-- list of comments -->
                     {% for comment in comments %}
                     <div class="users-comments">

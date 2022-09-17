@@ -47,7 +47,8 @@ main {
 }
 
 .nav-link, .social-networks, main p,
-main h1, main h3, #recipe {
+main h1, main h3, #recipe, .comments,
+#like-button {
     color: var(--font-color);
 }
 
@@ -151,7 +152,7 @@ main h1, main h3, #recipe {
     width: 100%;
 }
 
-#recipe {
+#recipe, #like-button {
     background-color: var(--recipe-background);
 }
 
