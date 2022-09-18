@@ -43,7 +43,7 @@ class Recipe(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='recipe_like', blank=True)
-    featured = models.BooleanField()
+    featured = models.BooleanField(default=0)
     time_taken = models.IntegerField(default=0)
     rating = models.PositiveIntegerField(
         default=3,

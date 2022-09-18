@@ -19,7 +19,7 @@
                         <h3>Status: User</h3>
                         {% endif %}
                     </div>
-                    <a class="btn mt-5" href="#">Add new recipe!</a>
+                    <a class="btn mt-5" href="/add_recipe">Add new recipe!</a>
                     <form class="form-control mt-5 box-shadow" id="signup_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ user_form | crispy }}
@@ -46,7 +46,7 @@
                     <ul class="form-control">
                         {% for favorite in favorites %}
                         <li class="list-group-item">
-                            <a class="nav-item" href="{% url 'recipe_detail' favorite.slug %}">{{ favorite.recipe_name }}</a>
+                            <a class="nav-item" href="#">{{ favorite.recipe_name }}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -56,7 +56,7 @@
                     <ul class="form-control">
                         {% for author in personal_recipes %}
                         <li class="list-group-item">
-                            <a class="nav-item" href="#">{{ author.recipe_name }}</a>
+                            <a class="nav-item" href="{% url 'edit_recipe' author.slug %}">{{ author.recipe_name }}</a>
                         </li>
                         {% endfor %}
                     </ul>

@@ -8,12 +8,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.template.defaultfilters import slugify
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
 from django.contrib.auth.forms import PasswordChangeForm
 from .models import Recipe, Comment
-from .forms import CommentForm, UserUpdateForm
+from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm
 
 
 def categories(request):
@@ -105,7 +106,8 @@ class RecipeDetail(View):
             comment.post = post
             comment.save()
             messages.success(
-                request, """Your comment was sent successfully and is awaiting approval!""")
+                request,
+                """Your comment was sent successfully and is awaiting approval!""")
         else:
             comment_form = CommentForm()
         return render(
@@ -193,3 +195,21 @@ def profile_(request):
                }
 
     return render(request, 'profile.html', context,)
+
+
+def add_recipe_(request):
+    """
+    Adds a new user recipe to the website.
+    """
+    recipe_form = AddEditRecipeForm(request.POST)
+    if request.method == 'POST':
+        if recipe_form.is_valid():
+            new_recipe = recipe_form.save(commit=False)
+            new_recipe.author = request.user
+            new_recipe.status = 1
+            new_recipe.slug = slugify(new_recipe.recipe_name)
+            new_recipe = recipe_form.save()
+            return redirect('profile')
+    context = {'recipe_form': recipe_form}
+
+    return render(request, 'add_recipes.html', context)

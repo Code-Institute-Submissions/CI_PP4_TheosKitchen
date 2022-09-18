@@ -7,6 +7,7 @@ from . import views
 
 urlpatterns = [
      path('', views.Featured.as_view(), name="Home"),
+     path('add_recipe', views.add_recipe_, name="add_recipe"),
      path('profile/', views.profile_, name="profile"),
      path('categories/', views.categories, name="categories"),
      path('categories_list/<str:cats>', views.categories_view,
@@ -18,5 +19,5 @@ urlpatterns = [
           name="delete_comment"),
      path('edit_comment/<int:pk>', views.EditComment.as_view(),
           name="edit_comment"),
-     path('password_change', views.profile_, name="password_change"),
+     path('profile', views.profile_, name="password_change"),
 ]

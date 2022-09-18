@@ -131,8 +131,7 @@
                     <!-- Delete comment button, opens modal -->
                     <button type="button" class="btn mb-3" data-bs-toggle="modal" data-bs-target="#delete-comment">Delete</button>
                     <!-- Delete comment bootstrap modal-->
-                    <div class="modal fade" id="delete-comment"
-                        tabindex="-1" aria-hidden="true">
+                    <div class="modal fade" id="delete-comment" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -142,8 +141,7 @@
                                     Are you sure you want to delete your comment?
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn" data-bs-dismiss="modal">Close</button>
                                     <a href="{% url 'delete_comment' comment.id %}" class="btn btn-danger" aria-label="Delete Comment">Delete</a>
                                 </div>
                             </div>
