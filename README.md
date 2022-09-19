@@ -124,15 +124,18 @@ The website has been built using a template engine so that all pages follow the 
 
 The Pages are structured in a Regularly used, user friendly and well-known format. This makes each page easy to navigate, coupled with a responsive navbar and footer this gives the user many options for navigating around the website.
 
-The website consists of 8 main pages, some views spread from these pages and an Error Page.
+The website consists of 9 main pages, some views spread from these pages and an Error Page.
 - Home page
 - Login page
 - Signup page
 - Logout page
-- Account page
-- Recipes page (with a detailed view for each recipe)
-- Catagories page (with a separate list for each category)
-- Add/ Edit Recipes page
+- Profile page
+- Recipes page
+    - Recipe details page to show a full description of the recipe.
+- Catagories page
+    - Recipe categories page for each category.
+- Add Recipes page
+- Edit Recipes page
 - Error pages (to guide the user back to the main website)
 
 ### Wireframes

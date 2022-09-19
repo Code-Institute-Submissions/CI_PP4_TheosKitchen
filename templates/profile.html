@@ -57,6 +57,7 @@
                         {% for author in personal_recipes %}
                         <li class="list-group-item">
                             <a class="nav-item" href="{% url 'edit_recipe' author.slug %}">{{ author.recipe_name }}</a>
+                            <a class="nav-item" href="{% url 'delete' author.slug %}">Delete</a>
                         </li>
                         {% endfor %}
                     </ul>

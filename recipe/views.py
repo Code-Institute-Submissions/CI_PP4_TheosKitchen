@@ -233,3 +233,9 @@ def edit_recipe(request, slug):
     context = {'recipe_form': recipe_form}
 
     return render(request, 'edit_recipes.html', context)
+
+
+def delete_recipe(request, slug):
+    recipe = get_object_or_404(Recipe, slug=slug)
+    recipe.delete()
+    return redirect('profile')
