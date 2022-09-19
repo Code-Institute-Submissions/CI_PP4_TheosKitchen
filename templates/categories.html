@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load cloudinary %}
 
 {% block content %}
 
     <!-- List of Categories -->
     <section id="content" class="content content-categories">
         <h1 class="title text-center">Categories</h1>
-        <div class="container box-shadow">
+        <div class="container box-shadow mt-5">
             <div class="row">
                 {% for category in categories_list %}
                 <div class="col-md-4">
                     <a class="category-titles" href="{% url 'categories_list' category %}" aria-label="Go to a list of all categories.">
                         <div class="content-img">
-                            <img src="{{ category.category_image.url}}" alt=" {{ category.title }} Image">
+                            {% cloudinary category.category_image format="webp" alt=category.title %}
                             <div>
                                 <h3 class="title text-center category-titles">{{ category.title }}</h3>
                             </div>

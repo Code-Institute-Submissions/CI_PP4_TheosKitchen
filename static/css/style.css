@@ -170,6 +170,12 @@ main h1, main h3, #recipe, .comments,
     color: #000;
 }
 
+/* Profile Styles */
+
+#delete-button {
+    float: right;
+}
+
 /* Categories List Styles */
 
 .content-img {
@@ -223,5 +229,11 @@ main h1, main h3, #recipe, .comments,
 }
 
 @media screen and (max-width: 500px) {
-    
+    .card {
+        margin: auto 10%;
+    }
+
+    #welcome-message {
+        width: 80%;
+    }
 }

@@ -523,19 +523,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Recipe List | From any page on the website use the Navbar to navigate to the Recipes page. | See a list of all the recipes orders by their ratings | Works as expected |
 | Categories | From any page on the website use the Navbar to navigate to the Categories page. | See a list of all the Categories on the website. | Works as expected |
-| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
-<details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
-</details>
-<br>
-
-3. As a first time user I want to see the available recipes that are on the website so that I can learn to eat healthier.
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| Recipe List | From any page on the website use the Navbar to navigate to the Recipes page. | See a list of all the recipes orders by their ratings | Works as expected |
-| Categories | From any page on the website use the Navbar to navigate to the Categories page. | See a list of all the Categories on the website. | Works as expected |
-| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
+| Featured Recipes | From any page on the website use the Navbar to navigate to the Home page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
@@ -566,7 +554,7 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Favorites | From any page of the website and once logged into an account, using the Navbar navigate to the Recipes page, find a recipe you like and locate teh heart icon at teh bottom of the card and click it mark it as a Favorite recipe, using the Navbar, navigate to the account page and view the users favorite recipes. | The user can see their favorite recipes. | Works as expected |
+| Favorites | From any page of the website and once logged into an account, using the Navbar navigate to the Recipes page, find a recipe you like and locate the heart icon at teh bottom of the card and click it mark it as a Favorite recipe, using the Navbar, navigate to the account page and view the users favorite recipes. | The user can see their favorite recipes. | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
@@ -588,7 +576,7 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Featured Recipes | From any page on the website use the Navbar to navigate to the Featured Recipes page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
+| Featured Recipes | From any page on the website use the Navbar to navigate to the Home page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
@@ -608,7 +596,7 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Responsive Design | Using Google Chrome Brower and on any page of the website, open chrome developer tools and resize the webpage. | The webpage reacts responsively and any elements that require resizing are downsized for smaller screens. | Works as expected |
+| Responsive Design | Using Google Chrome Browser and on any page of the website, open chrome developer tools and resize the webpage. | The webpage reacts responsively and any elements that require resizing are downsized for smaller screens. | Works as expected |
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
@@ -648,7 +636,7 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Recipe Comments | As the website admin and from the home page of the website, go to the url bar and add '/admin' to the end of the url to access the admin panel, locate the comments option and filter by not approved, read and make sure the comments meet the websites, guidelines before approving the comment. | The comment gets approved and becomes visible on the normal website for everyone to see. | Works as expected |
+| Recipe Comments | As the website admin from any page use the Navbar to access the admin panel, locate the comments option and filter by not approved, read and make sure the comments meet the websites, guidelines before approving the comment. | The comment gets approved and becomes visible on the normal website for everyone to see. | Works as expected |
 <details><summary>Screenshots</summary>
 <img src="documentation/user-story-testing/user-story-x.jpg">
 </details>
