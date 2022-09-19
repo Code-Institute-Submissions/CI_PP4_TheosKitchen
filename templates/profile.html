@@ -20,7 +20,7 @@
                         {% endif %}
                     </div>
                     <a class="btn mt-5" href="/add_recipe">Add new recipe!</a>
-                    <form class="form-control mt-5 box-shadow" id="signup_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
+                    <form class="form-control mt-5 box-shadow" id="profile_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ user_form | crispy }}
                         {% if redirect_field_value %}
@@ -28,13 +28,13 @@
                         {% endif %}
                         <button class="btn" type="submit">Update</button>
                     </form>
-                    <form method="POST" id="password_change_form" action="{% url 'account_change_password' %}" class=" form-control mt-5 box-shadow">
+                    <form method="POST" id="password_change_form" action="{% url 'password_change' %}" class=" form-control mt-5 box-shadow">
                         {% csrf_token %}
                         {{ password_change_form | crispy }}
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <input onclick="location.href='{% url 'password_change' %}'" class="btn" type="button" name="action" value="{{ 'Change Password' }}">
+                        <button class="btn" type="submit">Change Password</button>
                     </form>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <ul class="form-control">
                         {% for favorite in favorites %}
                         <li class="list-group-item">
-                            <a class="nav-item" href="#">{{ favorite.recipe_name }}</a>
+                            <a class="nav-item" href="{% url 'recipe_detail' favorite.slug %}">{{ favorite.recipe_name }}</a>
                         </li>
                         {% endfor %}
                     </ul>

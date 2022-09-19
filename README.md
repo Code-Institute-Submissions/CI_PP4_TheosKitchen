@@ -3,7 +3,7 @@
 
 ![Mock-up image](documentation/wireframes/am-i-responsive.jpg)
 
- [Live webpage]()
+ [Live webpage](https://theos-kitchen.herokuapp.com/)
 
 ## About
 
@@ -108,11 +108,11 @@ For the colour scheme I have opted to implement a dark and light theme while usi
 <br>
 
 #### Dark Mode
-![Dark Mode Theme](documentation/features/colour-palette-dark.png)
+![Dark Mode Theme](documentation/features/colour-palette-dark.jpg)
 <br>
 
 #### Light Mode
-![Light Mode Theme](documentation/features/colour-palette-light.png)
+![Light Mode Theme](documentation/features/colour-palette-light.jpg)
 
 ### Fonts
  I am using Inter font with a backup of sans-serif across the website for the title and headers. This is used to maintain a Consistent and professional look with an easily readable format. 

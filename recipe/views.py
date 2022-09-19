@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth import update_session_auth_hash
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, reverse, redirect
@@ -12,9 +13,9 @@ from django.template.defaultfilters import slugify
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
-from django.contrib.auth.forms import PasswordChangeForm
+# from django.contrib.auth.forms import PasswordChangeForm
 from .models import Recipe, Comment
-from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm
+from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm, MyChangePasswordForm
 
 
 def categories(request):
@@ -166,10 +167,10 @@ def profile_(request):
     Takes users to their profile page when signed in
     """
     user = request.user
-    favorites = Recipe.objects.filter(likes=request.user)
-    personal_recipes = Recipe.objects.filter(author=request.user)
-    user_form = UserUpdateForm(request.POST or None, instance=request.user)
-    password_change_form = PasswordChangeForm(user, request.POST or None)
+    favorites = Recipe.objects.filter(likes=user)
+    personal_recipes = Recipe.objects.filter(author=user)
+    user_form = UserUpdateForm(request.POST or None, instance=user)
+    password_change_form = MyChangePasswordForm(user, data=request.POST)
     if request.method == 'POST':
         if 'user_' in request.POST:
             if user_form.is_valid():
@@ -179,12 +180,15 @@ def profile_(request):
             else:
                 messages.error(
                     request, 'Your profile could not be updated at this time.')
+
         elif 'password_' in request.POST:
             if password_change_form.is_valid():
                 password_change_form.save()
+                update_session_auth_hash(request, password_change_form.user)
                 messages.success(request, 'Your password has been updated!')
                 return redirect('profile')
             else:
+                password_change_form = MyChangePasswordForm(user, data=request.POST)
                 messages.error(
                     request, 'your password could not be updated at this time')
 
@@ -194,7 +198,7 @@ def profile_(request):
                'personal_recipes': personal_recipes,
                }
 
-    return render(request, 'profile.html', context,)
+    return render(request, 'profile.html', context)
 
 
 def add_recipe_(request):
