@@ -213,3 +213,19 @@ def add_recipe_(request):
     context = {'recipe_form': recipe_form}
 
     return render(request, 'add_recipes.html', context)
+
+
+def edit_recipe(request, slug):
+    """
+    Edits a user recipe on the website.
+    """
+    recipe = get_object_or_404(Recipe, slug=slug)
+    if request.method == 'POST':
+        recipe_form = AddEditRecipeForm(request.POST, instance=recipe)
+        if recipe_form.is_valid():
+            recipe_form.save()
+            return redirect('profile')
+    recipe_form = AddEditRecipeForm(instance=recipe)
+    context = {'recipe_form': recipe_form}
+
+    return render(request, 'edit_recipes.html', context)

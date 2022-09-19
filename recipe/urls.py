@@ -8,6 +8,7 @@ from . import views
 urlpatterns = [
      path('', views.Featured.as_view(), name="Home"),
      path('add_recipe', views.add_recipe_, name="add_recipe"),
+     path('edit_recipe/<slug:slug>', views.edit_recipe, name="edit_recipe"),
      path('profile/', views.profile_, name="profile"),
      path('categories/', views.categories, name="categories"),
      path('categories_list/<str:cats>', views.categories_view,

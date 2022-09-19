@@ -73,6 +73,8 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
+SUMMERNOTE_THEME = 'bs5'
+
 EMAIL_BACKEND = 'anymail.backends.sendinblue.EmailBackend'
 
 DEFAULT_FROM_EMAIL = 'admin@theoskitchen.com'

@@ -30,6 +30,5 @@ class AddEditRecipeForm(forms.ModelForm):
     """
     class Meta:
         model = Recipe
-        fields = (
-            'recipe_name', 'categories', 'description',
-            'featured_image', 'instructions', 'time_taken',)
+        fields = ('recipe_name', 'categories', 'description',
+                  'featured_image', 'instructions', 'time_taken',)
