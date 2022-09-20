@@ -13,9 +13,9 @@ from django.template.defaultfilters import slugify
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
-# from django.contrib.auth.forms import PasswordChangeForm
+from cloudinary.forms import cl_init_js_callbacks
 from .models import Recipe, Comment
-from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm, MyChangePasswordForm
+from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm
 
 
 def categories(request):
@@ -37,7 +37,7 @@ def categories_view(request, cats):
     category = Recipe.objects.filter(
         categories__title__contains=cats, status=1)
 
-    paginator = Paginator(category, 6)
+    paginator = Paginator(category, 8)
 
     page_number = request.GET.get('page')
     category = paginator.get_page(page_number)
@@ -223,6 +223,7 @@ def edit_recipe(request, slug):
     """
     Edits a user recipe on the website.
     """
+    context = dict(direct_form=AddEditRecipeForm())
     recipe = get_object_or_404(Recipe, slug=slug)
     if request.method == 'POST':
         recipe_form = AddEditRecipeForm(request.POST, instance=recipe)
@@ -230,6 +231,7 @@ def edit_recipe(request, slug):
             recipe_form.save()
             return redirect('profile')
     recipe_form = AddEditRecipeForm(instance=recipe)
+    cl_init_js_callbacks(context['direct_form'], request)
     context = {'recipe_form': recipe_form}
 
     return render(request, 'edit_recipes.html', context)

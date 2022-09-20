@@ -377,7 +377,8 @@ All pages passed with no errors, these were run as web pages to combines the par
 I used the W3C Jigsaw CSS Validation Service to validate the CSS of the website.
 My CSS passed with no errors and warnings to show.
 <details><summary>CSS Validation</summary>
-<img src="documentation/validation/validation-css-whole-page.jpg">
+<img src="documentation/validation/css-whole-page.jpg">
+<img src="documentation/validation/css-whole-page-warnings.jpg">
 </details>
 <br>
 
@@ -385,7 +386,7 @@ My CSS passed with no errors and warnings to show.
 JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file.
 The file for the theme switch passed with no errors.
 <details><summary>Theme Switch</summary>
-<img src="documentation/validation/validation-js-theme.jpg">
+<img src="documentation/validation/js-theme.jpg">
 </details>
 <br>
 
@@ -396,31 +397,31 @@ My code passed with no errors and warnings to show.
 <details><summary>Recipe App</summary>
 
 <details><summary>admin.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/admin.jpg">
 </details>
 
 <details><summary>content_processor.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/content-processor.jpg">
 </details>
 
 <details><summary>forms.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/forms.jpg">
 </details>
 
 <details><summary>models.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/models.jpg">
 </details>
 
 <details><summary>urls.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/urls.jpg">
 </details>
 
 <details><summary>views.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<img src="documentation/validation/views.jpg">
 </details>
 
-<details><summary>test.py</summary>
-<img src="documentation/validation/validation-python.jpg">
+<details><summary>tests.py</summary>
+<img src="documentation/validation/tests.jpg">
 </details>
 
 </details>

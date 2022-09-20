@@ -156,6 +156,14 @@ main h1, main h3, #recipe, .comments,
     background-color: var(--recipe-background);
 }
 
+.recipe-detail-img {
+    content-visibility: auto;
+}
+
+.recipe-detail-img img {
+    width: 100%;
+}
+
 /* Card Styles */
 
 .card-image {
