@@ -4,10 +4,8 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <!-- NavBar brand -->
-        <a class="navbar-brand" href="{% url 'Home' %}">
-            <img src="{% static 'images/favicon.webp' %}" alt="" width="30" height="24">
-        </a>
-        <h1 class="navbar-toggler title">Theo's Kitchen</h1>
+        <img src="{% static 'images/favicon.webp' %}" alt="Website Logo" width="32" height="32">
+        <h2 class="navbar-toggler title" >Theo's Kitchen</h2>
         <!-- Hamburger Icon -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -67,9 +65,9 @@
                 {% endif %}
             </ul>
             <!-- Theme switch toggle -->
+            <input id="theme"  type="checkbox" name="theme">
             <label for="theme" class="switch">Theme Switch
                 <span>
-                    <input id="themeSwitch" type="checkbox" name="theme">
                     <span class="slider"></span>
                 </span>
             </label>

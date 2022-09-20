@@ -97,7 +97,7 @@ main h1, main h3, #recipe, .comments,
     height: 30px;
 }
 
-:root:not(.light) .switch input {
+:root:not(.light) .switch input, #theme {
     display: none;
 }
 
@@ -125,7 +125,7 @@ main h1, main h3, #recipe, .comments,
     height: 30px;
 }
 
-:root.light .switch input {
+:root.light .switch input, #theme {
     display: none;
 }
 
@@ -158,8 +158,12 @@ main h1, main h3, #recipe, .comments,
 
 /* Card Styles */
 
-.card div {
-    height: 100px;
+.card-image {
+    height: max-content;
+}
+
+.card-image img {
+    width: inherit;
 }
 
 .card ul .card-description {
@@ -174,6 +178,12 @@ main h1, main h3, #recipe, .comments,
 
 #delete-button {
     float: right;
+}
+
+.card-title {
+    color: #000;
+    font-size: 95%;
+    height: 100px;
 }
 
 /* Categories List Styles */
@@ -215,7 +225,7 @@ main h1, main h3, #recipe, .comments,
 }
 
 @media screen and (max-width: 900px) {
-    #recipe-list {
+    .recipe-list {
         margin: auto;
     }
 

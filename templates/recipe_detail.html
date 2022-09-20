@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cloudinary %}
 
 {% block content %}
 {% load crispy_forms_tags %}
@@ -9,7 +10,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto p-md-3" id="recipe">
-                <img class="post-content-img" src="{{ post.featured_image.url }}" alt="{{ post.recipe_name }} Image">
+                <div>
+                    {% cloudinary post.featured_image format="webp" alt=post.recipe_name %}
+                </div>
                 <div>
                     <!-- Recipe name -->
                     <h2 class="mt-3">{{ post.recipe_name }}</h2>
