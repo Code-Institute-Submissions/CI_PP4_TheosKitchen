@@ -174,12 +174,9 @@ The website consists of 9 main pages, some views spread from these pages and an 
 - [JShint](https://jshint.com/) was used to validate the Javascript.
 - [PEP8 Online](http://pep8online.com/) was used to validate the Python.
 - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to validate the website performance, best practice and SEO.
+- [SendinBlue](https://www.sendinblue.com/) was used as our email service to receive our password reset emails.
 
 ### Libraries
-#### Python Libraries
-
-
-#### Third Party Libraries
 - [Django](https://www.djangoproject.com/) – JUSTIFICATION: Django is used as both a framework and templating engine to speed up the development of the project.
 - [Gunicorn](https://gunicorn.org/) – JUSTIFICATION: Gunicorn is used as the WSGI HTTP Server.
 - [PostgreSQL](https://www.postgresql.org/) – JUSTIFICATION: PostgresSQL is used as the database to make sure we have persistent storage for the recipes.
@@ -188,7 +185,7 @@ The website consists of 9 main pages, some views spread from these pages and an 
 - [Dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/) – JUSTIFICATION: is used to link cloudinary to our deployed version using a URL environment variable for persistent image storage.
 - [Summernote](https://summernote.org/) – JUSTIFICATION: Summernote is used to allow users to type their own recipes into the website using a simple text editor.
 - [Django-Allauth](https://pypi.org/project/django-allauth/0.13.0/) – JUSTIFICATION: Django-Allauth is being used to provide email authentication and password management.
-- [Anymail]()
+- [Anymail](https://pypi.org/project/django-anymail/0.1.dev2/) – JUSTIFICATION: Anymail is being used to allow us to send our emails through the SendinBlue email service.
 
 [Back to Table Of Content](#table-of-content)
 
@@ -253,9 +250,9 @@ The website consists of 9 main pages, some views spread from these pages and an 
 <br>
 
 ### Add and Edit Recipes
-- The Add and Edit Recipe page allows the user to add their own recipe to the website.
-- The Add and Edit Recipe page allows a users to edit their own recipes but should not allow them to edit others.
-- The Add and Edit Recipe page is fully responsive down to mobile size devices.
+- The Add and Edit Recipe pages allows the user to add their own recipe to the website.
+- The Add and Edit Recipe pages allows a users to edit their own recipes but should not allow them to edit others.
+- The Add and Edit Recipe pages are fully responsive down to mobile size devices.
 - User stories covered: 7,10,12
 <details><summary>Add and Edit Recipes</summary>
 <img src="documentation/features/add-edit-recipes.jpg">
@@ -337,39 +334,42 @@ The website consists of 9 main pages, some views spread from these pages and an 
 ## Validation
 ### HTML Validation
 I used the W3C Validation Service to validate the HTML of the website.
-All pages passed with no errors and the contact form caused a warning that says there is an unnecessary script on page load, but this is required for the EmailJS form API to work, this was tested without the code and it will not function without it.
-<details><summary>Base HTML</summary>
-<img src="documentation/validation/validation-html-base.jpg">
-</details>
+All pages passed with no errors, these were run as web pages to combines the parts of the template into completed versions for the browser.
 <details><summary>Home Page</summary>
-<img src="documentation/validation/validation-html-index.jpg">
+<img src="documentation/validation/html-index.jpg">
 </details>
 <details><summary>Login Page</summary>
-<img src="documentation/validation/validation-html-login.jpg">
+<img src="documentation/validation/html-login.jpg">
 </details>
 <details><summary>Logout Page</summary>
-<img src="documentation/validation/validation-html-logout.jpg">
+<img src="documentation/validation/html-logout.jpg">
 </details>
 <details><summary>Signup Page</summary>
-<img src="documentation/validation/validation-html-signup.jpg">
+<img src="documentation/validation/html-signup.jpg">
 </details>
 <details><summary>Categories Page</summary>
-<img src="documentation/validation/validation-html-categories.jpg">
+<img src="documentation/validation/html-categories.jpg">
 </details>
 <details><summary>Category Page</summary>
-<img src="documentation/validation/validation-html-category.jpg">
+<img src="documentation/validation/html-category.jpg">
 </details>
 <details><summary>Recipes Page </summary>
-<img src="documentation/validation/validation-html-recipes.jpg">
+<img src="documentation/validation/html-recipes.jpg">
 </details>
-<details><summary>Add / Edit Recipes Page </summary>
-<img src="documentation/validation/validation-html-add-edit-recipes.jpg">
+<details><summary>Recipe Details Page </summary>
+<img src="documentation/validation/html-recipe-details.jpg">
 </details>
-<details><summary>Account Page </summary>
-<img src="documentation/validation/validation-html-Account.jpg">
+<details><summary>Add Recipes Page </summary>
+<img src="documentation/validation/html-add-recipes.jpg">
+</details>
+<details><summary>Edit Recipes Page </summary>
+<img src="documentation/validation/html-edit-recipes.jpg">
+</details>
+<details><summary>Profile Page </summary>
+<img src="documentation/validation/html-profile.jpg">
 </details>
 <details><summary>Error Page </summary>
-<img src="documentation/validation/validation-html-error.jpg">
+<img src="documentation/validation/html-error.jpg">
 </details>
 <br>
 
@@ -382,8 +382,8 @@ My CSS passed with no errors and warnings to show.
 <br>
 
 ### JavaScript Validation
-JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript files.
-All Files passed with no errors and minimal warnings to show.
+JSHint Static Code Analysis Tool for JavaScript was used to validate the Javascript file.
+The file for the theme switch passed with no errors.
 <details><summary>Theme Switch</summary>
 <img src="documentation/validation/validation-js-theme.jpg">
 </details>
@@ -433,11 +433,17 @@ I used WAVE WebAIM web accessibility evaluation tool to ensure the website met h
 <details><summary>Recipes Page </summary>
 <img src="documentation/validation/accessibility-recipes.jpg">
 </details>
-<details><summary>Add / Edit Recipes Page </summary>
-<img src="documentation/validation/accessibility-add-edit-recipes.jpg">
+<details><summary>Recipe Details Page </summary>
+<img src="documentation/validation/accessibility-recipe-details.jpg">
 </details>
-<details><summary>Account Page </summary>
-<img src="documentation/validation/accessibility-Account.jpg">
+<details><summary>Add Recipes Page </summary>
+<img src="documentation/validation/accessibility-add-recipes.jpg">
+</details>
+<details><summary>Edit Recipes Page </summary>
+<img src="documentation/validation/accessibility-edit-recipes.jpg">
+</details>
+<details><summary>Profile Page </summary>
+<img src="documentation/validation/accessibility-profile.jpg">
 </details>
 <details><summary>Error Page </summary>
 <img src="documentation/validation/accessibility-error.jpg">
@@ -467,11 +473,17 @@ Google Lighthouse in Google Chrome Developer Tools was used to test the performa
 <details><summary>Recipes Page </summary>
 <img src="documentation/validation/lighthouse-recipes.jpg">
 </details>
-<details><summary>Add / Edit Recipes Page </summary>
-<img src="documentation/validation/lighthouse-add-edit-recipes.jpg">
+<details><summary>Recipe Details Page </summary>
+<img src="documentation/validation/lighthouse-recipe-details.jpg">
 </details>
-<details><summary>Account Page </summary>
-<img src="documentation/validation/lighthouse-account.jpg">
+<details><summary>Add Recipes Page </summary>
+<img src="documentation/validation/lighthouse-add-recipes.jpg">
+</details>
+<details><summary>Edit Recipes Page </summary>
+<img src="documentation/validation/lighthouse-edit-recipes.jpg">
+</details>
+<details><summary>Profile Page </summary>
+<img src="documentation/validation/lighthouse-profile.jpg">
 </details>
 <details><summary>Error Page </summary>
 <img src="documentation/validation/lighthouse-error.jpg">
