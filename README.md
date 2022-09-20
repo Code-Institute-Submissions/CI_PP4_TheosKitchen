@@ -728,3 +728,28 @@ This application has been deployed from GitHub to Heroku by following the steps:
 7. Press Enter to create your local clone
 
 [Back to Table Of Content](#table-of-content)
+
+## Credits
+Images and Logos not referenced below are owned by the developer.
+
+### Media
+All of the media featured on the website is not owned by the developer. The images and recipes added by the Admin have all been sourced from [Hello Fresh](https://www.hellofresh.co.uk/). 
+
+Any further recipes and images added by third parties and individuals have been obtained by the third party.
+
+| **Link to Asset** | **Created By** | **Web Source** |
+| ------------------- | ---------------- | ---------------- |
+| [Favicon Spaghetti](https://favicon.io/emoji-favicons/spaghetti) | [Favicon Team](https://favicon.io/emoji-favicons/spaghetti) | [Favicon](https://favicon.io/emoji-favicons/spaghetti) |
+| [Meat](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662850401/kvlx8qxtaxehfi0h4hia.jpg) | [Mali Maeder](https://www.pexels.com/@mali/) | [Pexels](https://www.pexels.com/photo/red-meat-with-chili-pepper-and-green-spies-65175/) |
+| [Pasta](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851686/nmholsozceciht0oxxe5.jpg) | [Pixabay](https://www.pexels.com/@pixabay/) | [Pexels](https://www.pexels.com/photo/yellow-pasta-spaghetti-eat-42326/) |
+| [Rapid](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662850378/cjiwo5amwqxmamxgbxyb.jpg) | [Tara Winstead](https://www.pexels.com/@tara-winstead/) | [Pexels](https://www.pexels.com/photo/dried-leaves-on-the-table-7111168/) |
+| [Vegetarian](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851626/phzfriq5etvrmp1mebca.jpg) | [Engin Akyurt](https://www.pexels.com/@enginakyurt/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-variety-of-vegetables-1435904/) |
+| [Under 650 Calories](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851794/ycthi1qesivvgdui4ecq.jpg) | [Ella Olsson](https://www.pexels.com/@ella-olsson-572949/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/) |
+|  |  |  |
+
+### Code
+- The Django All-Auth code and webpages were used from the Django blog project and then customized for this project.
+- A thankyou to 'toolman23' from Stackoverflow, on this [post](https://stackoverflow.com/questions/55314246/pre-populate-slug-field-into-a-form-field-of-a-django-site) his comment on a post where someone had a very similar issue to mine setting default values for user form including the slug for my recipes and getting the username for the author. Another thankyou to 'thepylot' who suggested using slugify to turn my recipe titles into the slug with ease.
+
+[Back to Table Of Content](#table-of-content)
+
