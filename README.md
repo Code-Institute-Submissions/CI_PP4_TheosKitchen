@@ -395,15 +395,31 @@ My code passed with no errors and warnings to show.
 
 <details><summary>Recipe App</summary>
 
-<details><summary>Python File</summary>
+<details><summary>admin.py</summary>
 <img src="documentation/validation/validation-python.jpg">
 </details>
 
+<details><summary>content_processor.py</summary>
+<img src="documentation/validation/validation-python.jpg">
 </details>
 
-<details><summary>Comments App</summary>
+<details><summary>forms.py</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
 
-<details><summary>Python File</summary>
+<details><summary>models.py</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="documentation/validation/validation-python.jpg">
+</details>
+
+<details><summary>test.py</summary>
 <img src="documentation/validation/validation-python.jpg">
 </details>
 
@@ -507,6 +523,7 @@ The website was tested on the following browsers in both regular and incognito m
 ## Testing user stories
 ### Manual Testing
 <br>
+
 1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
@@ -515,7 +532,9 @@ The website was tested on the following browsers in both regular and incognito m
 | Footer | On any page of the website, at the bottom of the page, locate the footer containing contact and social media information | Footer is located at the bottom of every page. | Works as expected |
 | Error Pages | From any page on the website, go to the URL bar and add onto the end of the url a random string on characters to be redirected to an error page | The error page loads as expected. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-1-1.jpg">
+<img src="documentation/user-story-testing/user-story-1-2.jpg">
+<img src="documentation/user-story-testing/user-story-1-3.jpg">
 </details>
 <br>
 
@@ -523,9 +542,9 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| User Sign Up | From any page on the website, when not logged in, locate the Sign Up button on the Navbar to take you to the Sign Up form. | Fill out and submit the form to be signed into your account. | Works as expected |
+| User Sign Up | From any page on the website, when not logged in, locate the Sign Up button on the Navbar to take you to the Sign Up form. | Fill out and submit the form to be signed into your profile. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-2.jpg">
 </details>
 <br>
 
@@ -537,7 +556,9 @@ The website was tested on the following browsers in both regular and incognito m
 | Categories | From any page on the website use the Navbar to navigate to the Categories page. | See a list of all the Categories on the website. | Works as expected |
 | Featured Recipes | From any page on the website use the Navbar to navigate to the Home page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-3-1.jpg">
+<img src="documentation/user-story-testing/user-story-3-2.jpg">
+<img src="documentation/user-story-testing/user-story-3-3.jpg">
 </details>
 <br>
 
@@ -547,7 +568,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Welcome Message/ Ethos | From any page on the website, use the Navbar to navigate to the home page and view the Welcome message. | Read about the company, what we do and its ethos. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-4.jpg">
 </details>
 <br>
 
@@ -555,10 +576,9 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Footer | On any page of the website scroll all the way down to the bottom of the page and locate the Footer with social media links. |  | Works as expected |
-| Social Media Links |  |  | Works as expected |
+| Footer | On any page of the website scroll all the way down to the bottom of the page and locate the Footer with social media links. | Footer is located at the bottom of every page. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-5.jpg">
 </details>
 <br>
 
@@ -569,7 +589,7 @@ The website was tested on the following browsers in both regular and incognito m
 | Favorites | From any page of the website and once logged into an account, using the Navbar navigate to the Recipes page, find a recipe you like and locate the heart icon at teh bottom of the card and click it mark it as a Favorite recipe, using the Navbar, navigate to the account page and view the users favorite recipes. | The user can see their favorite recipes. | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-6.jpg">
 </details>
 <br>
 
@@ -577,10 +597,11 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Add and Edit Recipes | From any page and when signed into an account, using the Navbar, navigate to the 'Account' page where you can find a list of the current recipes you have added or add a new one. | The user can add a new recipe to the website or edit an existing one that they have input using the form. | Works as expected |
+| Add and Edit Recipes | From any page and when signed into an account, using the Navbar, navigate to the 'Profile' page where you can find a list of the current recipes you have added or add a new one. | The user can add a new recipe to the website or edit an existing one that they have input using the form. | Works as expected |
 | Recipe Comments | From the recipe page select a recipe to view the Recipe details, where you can locate the recipe comments.  | The user is able to read the comments and share their own thoughts with the community. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-7-1.jpg">
+<img src="documentation/user-story-testing/user-story-7-2.jpg">
 </details>
 <br>
 
@@ -590,7 +611,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Featured Recipes | From any page on the website use the Navbar to navigate to the Home page. | See a list of all the Featured Recipes orders by their ratings | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-8.jpg">
 </details>
 <br>
 
@@ -600,7 +621,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Categories | From any page of the website, use the Navbar to navigate to the categories page and select a category from the list shown. | The user is taken to a Category page with only recipes specific to this category type. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-9.jpg">
 </details>
 <br>
 
@@ -610,7 +631,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Responsive Design | Using Google Chrome Browser and on any page of the website, open chrome developer tools and resize the webpage. | The webpage reacts responsively and any elements that require resizing are downsized for smaller screens. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-10.jpg">
 </details>
 <br>
 
@@ -620,7 +641,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Error Pages | From any page of the website, go to the url bar and add on to the end of the url with a random string of characters. | The user is redirected to a custom Error page to match the theme and design of the website. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-11.jpg">
 </details>
 <br>
 
@@ -628,9 +649,9 @@ The website was tested on the following browsers in both regular and incognito m
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| User Sign Up | From any page of the website, using the Navbar, navigate to the 'User Sign up' page and fill out the form. | The user is able to create and account and will be redirected to the account page after completion. | Works as expected |
+| User Sign Up | From any page of the website, using the Navbar, navigate to the 'User Sign up' page and fill out the form. | The user is able to create and account and will be redirected to the profile page after completion. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-2.jpg">
 </details>
 <br>
 
@@ -640,7 +661,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Recipe Comments | From the recipe page select a recipe to view the Recipe details, where you can locate the recipe comments.  | The user is able to read the comments and share their own thoughts with the community. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-7-2.jpg">
 </details>
 <br>
 
@@ -650,7 +671,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Recipe Comments | As the website admin from any page use the Navbar to access the admin panel, locate the comments option and filter by not approved, read and make sure the comments meet the websites, guidelines before approving the comment. | The comment gets approved and becomes visible on the normal website for everyone to see. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-x.jpg">
+<img src="documentation/user-story-testing/user-story-14.jpg">
 </details>
 <br>
 
