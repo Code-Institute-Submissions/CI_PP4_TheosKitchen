@@ -686,6 +686,12 @@ The website was tested on the following browsers in both regular and incognito m
 ## Bugs
 | **Bug** | **Fix** |
 | ------- | ------- |
+| Heroku First Build failed | Incorrect config var set as 'DISABLE_COLLECT_STATIC' instead of 'DISABLE_COLLECTSTATIC', changed to fix during development. |
+| Error when loading the '/admin/recipe/add' page. | Forgetting to run the migrations first, run migrations to fix. |
+| Category pages not displayed in list within the NavBar | Add helper return reverse 'category' slug to Category model |
+| Recipe_details page no loading when called getting no reverse url error. | Used 'post' model call instead of 'recipe' |
+| Posting a recipe comment causes a no reverse match for edit comment. | Edit comment function had not been written yet, URL was commented out ahead of time. |
+| Navbar not showing Categories, listing invisible Recipe names instead in dropdown. | Under recipe.views.py the categories_view method incorrectly pulled from the wrong variable. |
 |  |  |
 
 [Back to Table Of Content](#table-of-content)
