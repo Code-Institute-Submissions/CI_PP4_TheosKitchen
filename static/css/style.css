@@ -215,12 +215,21 @@ main h1, main h3, #recipe, .comments,
 /* Media Queries */
 
 @media screen and (max-width: 1200px) {
+    
+    .profile {
+        font-size: 85%;
+    }
+
     .card .list-group {
         font-size: 90%;
     }    
     
     .card-body h5 {
         font-size: 90%;
+    }
+
+    .form-control {
+        font-size: 85%;
     }
 }
 
@@ -231,6 +240,10 @@ main h1, main h3, #recipe, .comments,
     
     .card-body h5 {
         font-size: 95%;
+    }
+
+    .profile {
+        font-size: 75%;
     }
 }
 
@@ -245,6 +258,10 @@ main h1, main h3, #recipe, .comments,
     
     .card-body h5 {
         font-size: 100%;
+    }
+
+    .profile {
+        font-size: 80%;
     }
 }
 

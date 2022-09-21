@@ -5,59 +5,59 @@
 {% block content %}
 <!-- User Profile Page -->
 <div class="container">
-    <div class="row">
-        <div class="col-6 mt-3" id="profile">
-            <div class="container">
+    <div class="row" id="profile">
+        <div class="col-md-6 mt-3">
+            <div class="col-md-10 mx-auto">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2 class="title">Profile Information</h2>
-                        <h3>Username: {{ user.username }}</h3>
-                        <h3>Email: {{ user.email }}</h3>
+                        <h2 class="profile title">Profile Information</h2>
+                        <h3 class="profile">Username: {{ user.username }}</h3>
+                        <h3 class="profile">Email: {{ user.email }}</h3>
                         {% if user.is_superuser %}
-                        <h3>Status: Administrator</h3>
+                        <h3 class="profile">Status: Administrator</h3>
                         {% else %}
-                        <h3>Status: User</h3>
+                        <h3 class="profile">Status: User</h3>
                         {% endif %}
                     </div>
-                    <a class="btn mt-5" href="/add_recipe">Add new recipe!</a>
-                    <form class="form-control mt-5 box-shadow" id="profile_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
+                    <a class="btn mt-3 profile" href="/add_recipe">Add new recipe!</a>
+                    <form class="form-control mt-3 box-shadow profile" id="profile_form" method="post" action="{% url 'profile' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ user_form | crispy }}
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <button class="btn" type="submit">Update</button>
+                        <button class="btn profile" type="submit">Update</button>
                     </form>
-                    <form method="POST" id="password_change_form" action="{% url 'password_change' %}" class=" form-control mt-5 box-shadow">
+                    <form method="POST" id="password_change_form profile" action="{% url 'password_change' %}" class="form-control mt-3 box-shadow">
                         {% csrf_token %}
                         {{ password_change_form | crispy }}
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <button class="btn" type="submit">Change Password</button>
+                        <button class="btn profile" type="submit">Change Password</button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="col-6 mt-3">
-            <div class="container">
+        <div class="col-md-6 mt-3">
+            <div class="col-sm-12">
                 <div class="row" id="favorites">
-                    <h2 class="title">Favorites</h2>
+                    <h2 class="title profile">Favorites</h2>
                     <ul class="form-control">
                         {% for favorite in favorites %}
                         <li class="list-group-item">
-                            <a class="nav-item" href="{% url 'recipe_detail' favorite.slug %}">{{ favorite.recipe_name }}</a>
+                            <a class="nav-item profile" href="{% url 'recipe_detail' favorite.slug %}">{{ favorite.recipe_name }}</a>
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
                 <div class="row" id="personal_recipes">
-                    <h2 class="title mt-3">Personal Recipes</h2>
+                    <h2 class="title mt-3 profile">Personal Recipes</h2>
                     <ul class="form-control">
                         {% for author in personal_recipes %}
                         <li class="list-group-item">
-                            <a class="nav-item" href="{% url 'edit_recipe' author.slug %}">{{ author.recipe_name }}</a>
-                            <a class="nav-item" id="delete-button" href="{% url 'delete' author.slug %}">Delete</a>
+                            <a class="nav-item profile" href="{% url 'edit_recipe' author.slug %}">{{ author.recipe_name }}</a>
+                            <a class="nav-item profile" id="delete-button" href="{% url 'delete' author.slug %}">Delete</a>
                         </li>
                         {% endfor %}
                     </ul>
