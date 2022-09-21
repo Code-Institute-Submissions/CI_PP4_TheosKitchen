@@ -751,6 +751,7 @@ Any further recipes and images added by third parties and individuals have been 
 ### Code
 - The Django All-Auth code and webpages were used from the Django blog project and then customized for this project.
 - A thankyou to 'toolman23' from Stackoverflow, on this [post](https://stackoverflow.com/questions/55314246/pre-populate-slug-field-into-a-form-field-of-a-django-site) his comment on a post where someone had a very similar issue to mine setting default values for user form including the slug for my recipes and getting the username for the author. Another thankyou to 'thepylot' who suggested using slugify to turn my recipe titles into the slug with ease.
+- The Cloudinary file upload and image transformations was found in the [Cloudinary doc's](https://cloudinary.com/documentation/django_image_and_video_upload), which gave a thorough description of how to handle file uploads and pull requests in various formats.
 
 [Back to Table Of Content](#table-of-content)
 

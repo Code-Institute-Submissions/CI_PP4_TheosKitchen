@@ -38,7 +38,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_post")
     description = models.TextField()
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField('featured_image', default='placeholder')
     instructions = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(

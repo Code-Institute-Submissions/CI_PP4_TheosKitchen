@@ -4,7 +4,6 @@ Creates the forms for crispy forms.
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import PasswordChangeForm
 from django import forms
-from cloudinary.forms import CloudinaryJsFileField
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit
 from .models import Comment, Recipe
@@ -35,8 +34,7 @@ class AddEditRecipeForm(forms.ModelForm):
     class Meta:
         model = Recipe
         fields = ('recipe_name', 'categories', 'description',
-                  'instructions', 'time_taken',)
-    featured_image = CloudinaryJsFileField()
+                  'instructions', 'time_taken', 'featured_image')
 
 
 class MyChangePasswordForm(PasswordChangeForm):

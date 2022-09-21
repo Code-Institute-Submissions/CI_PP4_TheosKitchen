@@ -15,7 +15,8 @@ from django.views import generic
 from django.views.generic import UpdateView
 from cloudinary.forms import cl_init_js_callbacks
 from .models import Recipe, Comment
-from .forms import CommentForm, UserUpdateForm, AddEditRecipeForm
+from .forms import (CommentForm, UserUpdateForm,
+                    AddEditRecipeForm, MyChangePasswordForm)
 
 
 def categories(request):
@@ -108,7 +109,7 @@ class RecipeDetail(View):
             comment.save()
             messages.success(
                 request,
-                """Your comment was sent successfully and is awaiting approval!""")
+                "Your comment was sent successfully and is awaiting approval!")
         else:
             comment_form = CommentForm()
         return render(
@@ -188,7 +189,8 @@ def profile_(request):
                 messages.success(request, 'Your password has been updated!')
                 return redirect('profile')
             else:
-                password_change_form = MyChangePasswordForm(user, data=request.POST)
+                password_change_form = MyChangePasswordForm(
+                    user, data=request.POST)
                 messages.error(
                     request, 'your password could not be updated at this time')
 
@@ -206,7 +208,10 @@ def add_recipe_(request):
     Adds a new user recipe to the website.
     """
     recipe_form = AddEditRecipeForm(request.POST)
+    context = dict(backend_form=AddEditRecipeForm())
     if request.method == 'POST':
+        recipe_form = AddEditRecipeForm(request.POST, request.FILES)
+        context['posted'] = recipe_form.instance
         if recipe_form.is_valid():
             new_recipe = recipe_form.save(commit=False)
             new_recipe.author = request.user
@@ -223,15 +228,16 @@ def edit_recipe(request, slug):
     """
     Edits a user recipe on the website.
     """
-    context = dict(direct_form=AddEditRecipeForm())
     recipe = get_object_or_404(Recipe, slug=slug)
+    context = dict(backend_form=AddEditRecipeForm())
     if request.method == 'POST':
         recipe_form = AddEditRecipeForm(request.POST, instance=recipe)
+        recipe_form = AddEditRecipeForm(request.POST, request.FILES)
+        context['posted'] = recipe_form.instance
         if recipe_form.is_valid():
             recipe_form.save()
             return redirect('profile')
     recipe_form = AddEditRecipeForm(instance=recipe)
-    cl_init_js_callbacks(context['direct_form'], request)
     context = {'recipe_form': recipe_form}
 
     return render(request, 'edit_recipes.html', context)

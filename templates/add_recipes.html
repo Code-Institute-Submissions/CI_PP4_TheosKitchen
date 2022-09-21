@@ -12,11 +12,10 @@
                 <form class="form-control mt-5 box-shadow" id="add_recipe" method="post" action="{% url 'add_recipe' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ recipe_form | crispy }}
-                    {{ direct_form | crispy }}
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
-                    <button class="btn" type="submit">Submit</button>
+                    <button class="btn col-12 mt-3" type="submit">Submit</button>
                 </form>
             </div>
         </div>

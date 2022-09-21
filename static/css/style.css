@@ -167,12 +167,14 @@ main h1, main h3, #recipe, .comments,
 /* Card Styles */
 
 .card-image {
-    height: max-content;
+    width: 100%;
+    height: auto;
 }
 
-.card-image img {
+.recipe-image {
     width: inherit;
 }
+
 
 .card ul .card-description {
     height: 175px;
