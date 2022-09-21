@@ -139,12 +139,76 @@ The website consists of 9 main pages, some views spread from these pages and an 
 - Error pages (to guide the user back to the main website)
 
 ### Wireframes
-
 <details><summary>Mobile Design</summary>
-<img src="documentation/wireframes/mobile.jpg">
+<details><summary>Home Page</summary>
+<img src="documentation/wireframes/home-page.png">
 </details>
+<details><summary>Recipe Page</summary>
+<img src="documentation/wireframes/recipes-page.png">
+</details>
+<details><summary>Recipe Details Page</summary>
+<img src="documentation/wireframes/recipe-details-page.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="documentation/wireframes/profile-page.png">
+</details>
+<details><summary>Add Recipes Page</summary>
+<img src="documentation/wireframes/add-recipes-page.png">
+</details>
+<details><summary>Edit Recipes Page</summary>
+<img src="documentation/wireframes/edit-recipes-page.png">
+</details>
+<details><summary>Login Page</summary>
+<img src="documentation/wireframes/login-page.png">
+</details>
+<details><summary>Logout Page</summary>
+<img src="documentation/wireframes/logout-page.png">
+</details>
+<details><summary>Signup Page</summary>
+<img src="documentation/wireframes/signup-page.png">
+</details>
+<details><summary>Categories Page</summary>
+<img src="documentation/wireframes/categories-page.png">
+</details>
+<details><summary>Category Page</summary>
+<img src="documentation/wireframes/category-page.png">
+</details>
+</details>
+
 <details><summary>Desktop Design</summary>
-<img src="documentation/wireframes/desktop.jpg">
+<details><summary>Home Page</summary>
+<img src="documentation/wireframes/home-page-mobile.png">
+</details>
+<details><summary>Recipe Page</summary>
+<img src="documentation/wireframes/recipes-page-mobile.png">
+</details>
+<details><summary>Recipe Details Page</summary>
+<img src="documentation/wireframes/recipe-details-page-mobile.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="documentation/wireframes/profile-page-mobile.png">
+</details>
+<details><summary>Add Recipes Page</summary>
+<img src="documentation/wireframes/add-recipes-page-mobile.png">
+</details>
+<details><summary>Edit Recipes Page</summary>
+<img src="documentation/wireframes/edit-recipes-page-mobile.png">
+</details>
+<details><summary>Login Page</summary>
+<img src="documentation/wireframes/login-page-mobile.png">
+</details>
+<details><summary>Logout Page</summary>
+<img src="documentation/wireframes/logout-page-mobile.png">
+</details>
+<details><summary>Signup Page</summary>
+<img src="documentation/wireframes/signup-page-mobile.png">
+</details>
+<details><summary>Categories Page</summary>
+<img src="documentation/wireframes/categories-page-mobile.png">
+</details>
+<details><summary>Category Page</summary>
+<img src="documentation/wireframes/category-page-mobile.png">
+</details>
 </details>
 <br>
 
