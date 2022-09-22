@@ -398,7 +398,7 @@ User Model
 - The featured recipes list is fully responsive down to mobile size devices.
 - User stories covered: 1,10,11
 <details><summary>Error Pages</summary>
-<img src="documentation/features/error-pages.jpg">
+<img src="documentation/features/error-page.jpg">
 </details>
 <br>
 
@@ -724,7 +724,7 @@ The website was tested on the following browsers in both regular and incognito m
 |-------------|------------|---------------------|-------------------|
 | Error Pages | From any page of the website, go to the url bar and add on to the end of the url with a random string of characters. | The user is redirected to a custom Error page to match the theme and design of the website. | Works as expected |
 <details><summary>Screenshots</summary>
-<img src="documentation/user-story-testing/user-story-11.jpg">
+<img src="documentation/user-story-testing/user-story-1-3.jpg">
 </details>
 <br>
 
@@ -828,6 +828,7 @@ Any further recipes and images added by third parties and individuals have been 
 - The Django All-Auth code and webpages were used from the Django blog project and then customized for this project.
 - A thankyou to 'toolman23' from Stackoverflow, on this [post](https://stackoverflow.com/questions/55314246/pre-populate-slug-field-into-a-form-field-of-a-django-site) his comment on a post where someone had a very similar issue to mine setting default values for user form including the slug for my recipes and getting the username for the author. Another thankyou to 'thepylot' who suggested using slugify to turn my recipe titles into the slug with ease.
 - The Cloudinary file upload and image transformations was found in the [Cloudinary doc's](https://cloudinary.com/documentation/django_image_and_video_upload), which gave a thorough description of how to handle file uploads and pull requests in various formats.
+- Pagination used in multiple pages explained in the course materials from Code Institute
 
 [Back to Table Of Content](#table-of-content)
 
