@@ -396,7 +396,7 @@ The website consists of 9 main pages, some views spread from these pages and an 
 ## Validation
 ### HTML Validation
 I used the W3C Validation Service to validate the HTML of the website.
-All pages passed with no errors, these were run as web pages to combines the parts of the template into completed versions for the browser.
+All pages passed with no errors, these were run as web pages to combines the parts of the template into completed versions for the browser, with the exception of the error pages which would not be recognised by W3C.
 <details><summary>Home Page</summary>
 <img src="documentation/validation/html-index.jpg">
 </details>
@@ -459,31 +459,31 @@ My code passed with no errors and warnings to show.
 <details><summary>Recipe App</summary>
 
 <details><summary>admin.py</summary>
-<img src="documentation/validation/admin.jpg">
+<img src="documentation/validation/python-admin.jpg">
 </details>
 
-<details><summary>content_processor.py</summary>
-<img src="documentation/validation/content-processor.jpg">
+<details><summary>context_processor.py</summary>
+<img src="documentation/validation/python-context-processor.jpg">
 </details>
 
 <details><summary>forms.py</summary>
-<img src="documentation/validation/forms.jpg">
+<img src="documentation/validation/python-forms.jpg">
 </details>
 
 <details><summary>models.py</summary>
-<img src="documentation/validation/models.jpg">
+<img src="documentation/validation/python-models.jpg">
 </details>
 
 <details><summary>urls.py</summary>
-<img src="documentation/validation/urls.jpg">
+<img src="documentation/validation/python-urls.jpg">
 </details>
 
 <details><summary>views.py</summary>
-<img src="documentation/validation/views.jpg">
+<img src="documentation/validation/python-views.jpg">
 </details>
 
 <details><summary>tests.py</summary>
-<img src="documentation/validation/tests.jpg">
+<img src="documentation/validation/python-tests.jpg">
 </details>
 
 </details>

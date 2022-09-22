@@ -13,7 +13,6 @@ from django.template.defaultfilters import slugify
 from django.views import View
 from django.views import generic
 from django.views.generic import UpdateView
-from cloudinary.forms import cl_init_js_callbacks
 from .models import Recipe, Comment
 from .forms import (CommentForm, UserUpdateForm,
                     AddEditRecipeForm, MyChangePasswordForm)
