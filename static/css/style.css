@@ -46,9 +46,9 @@ main {
     padding-bottom: 100px;
 }
 
-.nav-link, .social-networks, main p,
+.social-networks, main p,
 main h1, main h3, #recipe, .comments,
-#like-button {
+#like-button, .nav-link {
     color: var(--font-color);
 }
 
@@ -77,6 +77,11 @@ main h1, main h3, #recipe, .comments,
     padding: 0;
     margin: 0;
 }
+
+.link {
+    color: var(--font-color);
+}
+
 
 /* Theme Switch Styles */
 .switch {

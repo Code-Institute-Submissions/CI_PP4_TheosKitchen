@@ -38,8 +38,6 @@ Theo's kitchen is a website that inspire's people to create and share their reci
     7. [Device Testing](#device-testing)
     8. [Browser Compatibility](#browser-compatibility)
 8. [Testing user stories](#testing-user-stories)
-    1. [Manual Testing](#manual-testing)
-    2. [Automated Testing](#automated-testing)
 9. [Bugs](#bugs)
 10. [Deployment](#deployment)
 11. [Credits](#credits)
@@ -586,7 +584,6 @@ The website was tested on the following browsers in both regular and incognito m
 - Microsoft Edge
 
 ## Testing user stories
-### Manual Testing
 <br>
 
 1. As a first time user I would like to be able to navigate through the website easily so that it is easy to find the information I am looking for.
@@ -739,12 +736,6 @@ The website was tested on the following browsers in both regular and incognito m
 <img src="documentation/user-story-testing/user-story-14.jpg">
 </details>
 <br>
-
-[Back to Table Of Content](#table-of-content)
-
-### Automated Testing
-<br>
-
 
 [Back to Table Of Content](#table-of-content)
 
