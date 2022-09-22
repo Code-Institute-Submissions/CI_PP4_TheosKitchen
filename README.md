@@ -801,7 +801,7 @@ Any further recipes and images added by third parties and individuals have been 
 | [Rapid](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662850378/cjiwo5amwqxmamxgbxyb.jpg) | [Tara Winstead](https://www.pexels.com/@tara-winstead/) | [Pexels](https://www.pexels.com/photo/dried-leaves-on-the-table-7111168/) |
 | [Vegetarian](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851626/phzfriq5etvrmp1mebca.jpg) | [Engin Akyurt](https://www.pexels.com/@enginakyurt/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-variety-of-vegetables-1435904/) |
 | [Under 650 Calories](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851794/ycthi1qesivvgdui4ecq.jpg) | [Ella Olsson](https://www.pexels.com/@ella-olsson-572949/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/) |
-|  |  |  |
+| [female crushing banana](https://www.pexels.com/photo/female-crushing-banana-in-hand-against-orange-background-6156962/) | [Laker](https://www.pexels.com/@laker/) | [female crushing banana](https://www.pexels.com/photo/female-crushing-banana-in-hand-against-orange-background-6156962/) |
 
 ### Code
 - The Django All-Auth code and webpages were used from the Django blog project and then customized for this project.

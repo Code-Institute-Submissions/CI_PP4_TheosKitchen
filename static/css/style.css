@@ -233,7 +233,7 @@ main h1, main h3, #recipe, .comments,
         font-size: 90%;
     }
 
-    .form-control {
+    .form-control, .input-group-text, .form-select {
         font-size: 85%;
     }
 }

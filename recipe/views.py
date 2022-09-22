@@ -26,11 +26,6 @@ def categories(request):
     return render(request, 'categories.html')
 
 
-def error_500(request):
-    data = {}
-    return render(request, '500.html', data)
-
-
 def categories_view(request, cats):
     """
     Renders the recipes filtered by categories.
@@ -231,8 +226,8 @@ def edit_recipe(request, slug):
     recipe = get_object_or_404(Recipe, slug=slug)
     context = dict(backend_form=AddEditRecipeForm())
     if request.method == 'POST':
-        recipe_form = AddEditRecipeForm(request.POST, instance=recipe)
-        recipe_form = AddEditRecipeForm(request.POST, request.FILES)
+        recipe_form = AddEditRecipeForm(
+            request.POST, request.FILES, instance=recipe)
         context['posted'] = recipe_form.instance
         if recipe_form.is_valid():
             recipe_form.save()
