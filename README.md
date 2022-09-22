@@ -490,7 +490,7 @@ My code passed with no errors and warnings to show.
 <br>
 
 ### Accessibility
-I used WAVE WebAIM web accessibility evaluation tool to ensure the website met high accessibility standards. All pages passed with no errors.
+I used WAVE WebAIM web accessibility evaluation tool to ensure the website met high accessibility standards. All pages passed with no errors, the profile page had to be run through the web extension as it would normally require a user to be logged in to an account and the standard API was not able to work around this.
 <details><summary>Home Page</summary>
 <img src="documentation/validation/accessibility-index.jpg">
 </details>
