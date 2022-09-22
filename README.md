@@ -136,6 +136,27 @@ The website consists of 9 main pages, some views spread from these pages and an 
 - Edit Recipes page
 - Error pages (to guide the user back to the main website)
 
+#### Database
+- The website was built using Python and the Django framework with a postgres database to store all of our information.
+
+<details><summary>Database Diagram</summary>
+<img src="documentation/wireframes/database.jpg">
+</details>
+
+The following models were created to represent the real database model structure within the website database.
+
+Recipe Model
+- The Recipe model contains all the information about the recipe in question, this is the main model that links to the comments, category and user models.
+
+Category Model
+- The Category model contains a list of categories that can be applied to the recipe as well as an image for the categories page so that we can have some visual clarity when on the website.
+
+Comment Model
+- The Comment model contains information about the comments people have places on which recipe, who made the comment and weather the comment is approved by the admin team.
+
+User Model
+- The User model contains all the information on each user, this comes from Django's All-Auth library.
+
 ### Wireframes
 <details><summary>Mobile Design</summary>
 <details><summary>Home Page</summary>
