@@ -495,16 +495,16 @@ My code passed with no errors and warnings to show.
 <img src="documentation/validation/python-models.jpg">
 </details>
 
-<details><summary>urls.py</summary>
+<details><summary>recipe/urls.py</summary>
 <img src="documentation/validation/python-urls.jpg">
+</details>
+
+<details><summary>theoskitchen/urls.py</summary>
+<img src="documentation/validation/python-theoskitchen-urls.jpg">
 </details>
 
 <details><summary>views.py</summary>
 <img src="documentation/validation/python-views.jpg">
-</details>
-
-<details><summary>tests.py</summary>
-<img src="documentation/validation/python-tests.jpg">
 </details>
 
 </details>
@@ -584,9 +584,6 @@ Google Lighthouse in Google Chrome Developer Tools was used to test the performa
 </details>
 <details><summary>Profile Page </summary>
 <img src="documentation/validation/lighthouse-profile.jpg">
-</details>
-<details><summary>Error Page </summary>
-<img src="documentation/validation/lighthouse-error.jpg">
 </details>
 <br>
 
@@ -779,16 +776,33 @@ The website was tested on the following browsers in both regular and incognito m
 This application has been deployed from GitHub to Heroku by following the steps:
 
 1. Create or log in to your account at heroku.com
-2. Create a new app, add a unique app name and choose your region
+2. Create a new app, add a unique app name (this project is named "theos-kitchen") and choose your region
 3. Click on create app
-4. Go to "Settings"
-5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
-6. Add required buildpacks (further dependencies). For this project, I set up 'Python' and 'node.js' in that order.
-7. Go to "Deploy" and select "GitHub" in "Deployment method"
-8. To link up our Heroku app to our Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below
-9.  Choose the branch you want to build your app from
-10. If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
-11. Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+4. Under resources search for postgres, and add a Postgres database to the app
+5. Install the plugins dj-database-url and psycopg2-binary
+6. Install django and gunicorn
+7. Add the list of requirements by writing in the terminal "pip3 freeze --local > requirements.txt"
+8. Create a Procfile in your app: 
+   ```
+   wsgi:PROJECT_NAME.wsgi
+   ```
+   (web: gunicorn theoskitchen.wsgi)
+9. In the setting.py file ensure you have connected to the Heroku postgres database
+10. Ensure Debug is set to False in the settings.py file
+11. Add localhost/127.0.0.1, and theoskitchen.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
+12. Go to Settings in your Heroku and set the environment variables in the Config Vars
+
+    ![Config vars](documentation/heroku-config-vars.jpg)
+    
+13. Remove DISABLE_COLLECTSTATIC from Heroku settings
+14. Push the code to Heroku using the command git push heroku main
+
+Final Steps:
+1. Go to "Deploy" in the menu bar on the top
+2. Select the deployment method Github
+3. Scroll down and enable automatic deployment
+
+    ![Deployment steps](documentation/heroku-deployment.jpg)
 
 ### Forking the GitHub Repository
 1. Go to the GitHub repository
@@ -822,7 +836,7 @@ Any further recipes and images added by third parties and individuals have been 
 | [Rapid](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662850378/cjiwo5amwqxmamxgbxyb.jpg) | [Tara Winstead](https://www.pexels.com/@tara-winstead/) | [Pexels](https://www.pexels.com/photo/dried-leaves-on-the-table-7111168/) |
 | [Vegetarian](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851626/phzfriq5etvrmp1mebca.jpg) | [Engin Akyurt](https://www.pexels.com/@enginakyurt/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-variety-of-vegetables-1435904/) |
 | [Under 650 Calories](https://res.cloudinary.com/ludicrouswolf/image/upload/v1662851794/ycthi1qesivvgdui4ecq.jpg) | [Ella Olsson](https://www.pexels.com/@ella-olsson-572949/) | [Pexels](https://www.pexels.com/photo/flat-lay-photography-of-vegetable-salad-on-plate-1640777/) |
-| [female crushing banana](https://www.pexels.com/photo/female-crushing-banana-in-hand-against-orange-background-6156962/) | [Laker](https://www.pexels.com/@laker/) | [female crushing banana](https://www.pexels.com/photo/female-crushing-banana-in-hand-against-orange-background-6156962/) |
+| [female crushing banana](https://res.cloudinary.com/ludicrouswolf/image/upload/v1663847295/pexels-laker-6156962_mibhym.webp) | [Laker](https://www.pexels.com/@laker/) | [Pexels](https://www.pexels.com/photo/female-crushing-banana-in-hand-against-orange-background-6156962/) |
 
 ### Code
 - The Django All-Auth code and webpages were used from the Django blog project and then customized for this project.
