@@ -28,7 +28,7 @@
                         {% endif %}
                         <button class="btn profile" type="submit">Update</button>
                     </form>
-                    <form method="POST" id="password_change_form profile" action="{% url 'password_change' %}" class="form-control mt-3 box-shadow">
+                    <form method="POST" id="password_change_form" action="{% url 'password_change' %}" class="form-control mt-3 box-shadow profile">
                         {% csrf_token %}
                         {{ password_change_form | crispy }}
                         {% if redirect_field_value %}
