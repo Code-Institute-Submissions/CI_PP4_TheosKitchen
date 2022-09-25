@@ -238,6 +238,9 @@ def edit_recipe(request, slug):
 
 
 def delete_recipe(request, slug):
+    """
+    Deletes a user recipe.
+    """
     recipe = get_object_or_404(Recipe, slug=slug)
     recipe.delete()
     return redirect('profile')

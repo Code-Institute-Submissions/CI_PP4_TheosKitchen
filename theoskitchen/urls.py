@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
@@ -27,8 +26,7 @@ urlpatterns = [
          auth_views.PasswordResetView.as_view(
              template_name='account/password_reset.html',
              subject_template_name='email/password_reset_key_subject.txt',
-             email_template_name='email/password_reset_key_message.txt',
-             # success_url='/login/'
+             email_template_name='email/password_reset_key_message.txt'
          ),
          name='password_reset'),
     path('password-reset/done/',
