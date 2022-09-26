@@ -768,6 +768,13 @@ The website was tested on the following browsers in both regular and incognito m
 | Navbar not showing Categories, listing invisible Recipe names instead in dropdown. | Under recipe.views.py the categories_view method incorrectly pulled from the wrong variable. |
 |  |  |
 
+## Remaining Bugs
+| **Bug** |
+| ------- |
+| The is a bug in both the User and password update forms on the profile page, these forms will post to the console in development but will not update the database, given more time i planned to eliminate this bug entirely before actual deployment. |
+| There is a empty link box on the 'edit recipe page' where teh current image is supposed to appear, the current image is pulled through from the database, sometimes in the correct format (.webp) and sometimes it will not but the error occurs because the django form does not currently create any text to fill the space WAVE accessibility does not like this. |
+|  |
+
 [Back to Table Of Content](#table-of-content)
 
 ## Deployment
